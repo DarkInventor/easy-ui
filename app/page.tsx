@@ -52,18 +52,20 @@ export default function IndexPage() {
       {/* <div className="relative min-h-screen overflow-hidden py-0 sm:py-0 md:py-0 lg:py-5"> */}
         {/* <div className="z-10 flex flex-col"> */}
           {/* <div > */}
-            <div className="flex flex-col items-start gap-6 mt-20 px-7 text-center md:items-center">
-              <Announcement />
-              <div className="relative flex flex-col gap-4 md:items-center lg:flex-row">
+            <div className="flex flex-col items-start gap-6 mt-20 px-7 text-center md:items-center pb-0 lg:pb-14 md:pb-14 sm:pb-0">
+              <Announcement />             
+               <div className="relative flex flex-col gap-4 md:items-center lg:flex-row">
                 <h1 className="relative mx-0 max-w-[43.5rem] text-balance bg-gradient-to-br from-black from-50% to-neutral-200/60 bg-clip-text pt-5 text-left text-5xl font-semibold tracking-tighter text-transparent sm:text-7xl md:mx-auto md:px-4 md:py-2 md:text-center md:text-7xl lg:text-7xl dark:text-white">
-                  Templates for Design Engineers
+                  Templates  
+                  for Web
+               Designers
                 </h1>
                 <span className="text-neutral-90 absolute -top-3.5 left-0 z-10 rotate-3 whitespace-nowrap rounded-full bg-neutral-800 px-2.5 py-1 text-[11px] font-semibold uppercase leading-5 tracking-wide text-white md:top-12 md:-rotate-12">
                   100% high-quality
                 </span>
               </div>
               <p className="max-w-xl text-balance text-left text-base tracking-tight text-black md:text-center md:text-lg dark:font-medium dark:text-white">
-                3+ free and animated templates built with{" "}
+                50+ free and animated templates built with{" "}
                 <span className="font-bold text-black dark:text-white">
                   React
                 </span>
@@ -115,20 +117,20 @@ export default function IndexPage() {
                       "group relative w-full gap-1 overflow-hidden rounded-full text-sm font-semibold tracking-tighter transition-all duration-150 ease-in-out hover:ring-2 hover:ring-neutral-300 hover:ring-offset-2 hover:ring-offset-inherit dark:hover:ring-black dark:hover:ring-offset-black "
                     )}
                   >
-                    Get Started
+                    Get Easy MVP
                     <ChevronRight className="ml-1 size-4 shrink-0 transition-all duration-300 ease-out group-hover:translate-x-1" />
                   </Link>
                 </div>
               </div>
 
-              <div className="flex max-w-xl flex-row items-center justify-between text-balance p-5 text-left text-base tracking-tight text-black md:text-center md:text-base dark:font-medium dark:text-white">
+              <div className="flex max-w-xl flex-row items-center justify-between text-balance p-0 pt-5 text-left text-base tracking-tight text-black md:text-center md:text-base dark:font-medium dark:text-white">
                 <span className="mr-2 font-300 text-gray-600 dark:text-gray-400 text-md">
                   Trusted by
                 </span>
                 <AvatarCircles numPeople={99} avatarUrls={avatarUrls} />
               </div>
 
-              <div className="relative hidden rounded-xl lg:block">
+              {/* <div className="relative hidden rounded-xl lg:block">
                 <img
                   src="/dashboard-dark.png"
                   alt="Hero Image"
@@ -142,9 +144,9 @@ export default function IndexPage() {
 
                 <BorderBeamm size={250} duration={12} delay={9} />
                 {/* <Features /> */}
-              </div>
+              {/* </div> */} 
 
-              <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 pt-20 text-center">
+              {/* <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 pt-20 text-center">
                 <h2 className="font-heading font-3xl leading-[1.1] sm:text-3xl md:text-3xl font-bold">
                   Features
                 </h2>
@@ -153,9 +155,9 @@ export default function IndexPage() {
                   features like auth, subscriptions, API routes, and static
                   pages would work in Next.js 13 app dir.
                 </p>
-              </div>
+              </div> */}
 
-              <div className="container relative mx-auto mt-32 w-full max-w-[1000px]">
+              {/* <div className="container relative mx-auto mt-32 w-full max-w-[1000px]">
                 <motion.span
                   animate={["initial"]}
                   whileHover={["hover"]}
@@ -200,7 +202,7 @@ export default function IndexPage() {
                 </motion.span>
                 {/* </div>
               <div className="relative h-full overflow-hidden md:py-50"> */}
-                <Features />
+                {/* <Features />
 
                 <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 pt-20 text-center">
                   <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-3xl font-bold">
@@ -212,7 +214,7 @@ export default function IndexPage() {
                   <OrbitingCirclesDemo />
                 </div>
               </div>
-            </div>
+            </div> */} 
             {/* <div className="mx-auto flex max-w-full flex-col items-center space-y-4 text-center pt-20">
                   <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
                     Don't take our word for it
@@ -221,10 +223,10 @@ export default function IndexPage() {
                     Hear what our satisfied customers have to say about us.
                   </p> */}
             <MarqueeDemo />
-            {/* </div> */}
-            <PricingPage />
+            </div>
+            {/* <PricingPage /> */}
 
-            <div className="pt-8 sm:pt-8 lg:pt-5 mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+            <div className="pt-12 sm:pt-8 lg:pt-25 mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
               <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-3xl font-bold">
                 Frequently asked questions
               </h2>
@@ -257,6 +259,6 @@ export default function IndexPage() {
       
     </section>
     
-    // </div>
+
   )
 }

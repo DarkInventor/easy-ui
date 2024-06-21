@@ -10,22 +10,21 @@ import {
     return (
       <Accordion type="single" collapsible className="w-full">
         <AccordionItem value="item-1">
-          <AccordionTrigger>Is it accessible?</AccordionTrigger>
+          <AccordionTrigger>Is Easy UI 100% free and open-source?</AccordionTrigger>
           <AccordionContent>
-            Yes. It adheres to the WAI-ARIA design pattern.
+            Yes, all our templates are completely free and open-source.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-2">
-          <AccordionTrigger>Is it styled?</AccordionTrigger>
+          <AccordionTrigger>How do I use the Easy UI templates?</AccordionTrigger>
           <AccordionContent>
-            Yes. It comes with default styles that matches the other
-            components&apos; aesthetic.
+            Browse and select a template, download it, or clone it from our GitHub repository, and start using it.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-3">
-          <AccordionTrigger>Is it animated?</AccordionTrigger>
+          <AccordionTrigger>What tech stack are these templates built with and how?</AccordionTrigger>
           <AccordionContent>
-            Yes. It&apos;s animated by default, but you can disable it if you prefer.
+          Our templates are built with Next.js, React, MagicUI, ShadCNUI, Tailwind CSS, and Framer Motion, ensuring a modern, responsive, and seamless user experience.
           </AccordionContent>
         </AccordionItem>
       </Accordion>
