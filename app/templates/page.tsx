@@ -29,12 +29,12 @@ export default function TemplatePage() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <picture>
-            <source media="(max-width: 639px)" srcSet="/dashboard-dark.png" />
-            <video muted loop className="w-full h-auto">
-              <source src="/eztmp1.mp4" type="video/mp4" />
-            </video>
-          </picture>
+          <div className="sm:hidden">
+            <img src="/eztmp1-img.png" alt="Easy Template" className="w-full h-auto" />
+          </div>
+          <video muted loop className="hidden sm:block sm:w-[90%] sm:h-[90%] w-full h-auto">
+            <source src="/eztmp1.mp4" type="video/mp4" />
+          </video>
           <h2 className="mt-4 text-lg font-bold text-gray-800 dark:text-gray-200">Easy Template</h2>
           <p className="text-base text-gray-600 dark:text-gray-400">Template suitable for SaaS Products</p>
         </MagicCard>
@@ -43,12 +43,12 @@ export default function TemplatePage() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <picture>
-            <source media="(max-width: 639px)" srcSet="/dashboard-dark.png" />
-            <video muted loop className="w-full h-auto">
-              <source src="/designfast.mp4" type="video/mp4" />
-            </video>
-          </picture>
+          <div className="sm:hidden">
+            <img src="/designfast-img.png" alt="Designfast" className="w-full h-auto" />
+          </div>
+          <video muted loop className="hidden sm:block sm:w-[90%] sm:h-[90%] w-full h-auto">
+            <source src="/designfast.mp4" type="video/mp4" />
+          </video>
           <h2 className="mt-4 text-lg font-bold text-gray-800 dark:text-gray-200">Designfast</h2>
           <p className="text-base text-gray-600 dark:text-gray-400">Minimal template designed for Service business</p>
         </MagicCard>
@@ -57,12 +57,12 @@ export default function TemplatePage() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <picture>
-            <source media="(max-width: 639px)" srcSet="/dashboard-dark.png" />
-            <video muted loop className="w-full h-auto">
-              <source src="/quotesai.mp4" type="video/mp4" />
-            </video>
-          </picture>
+          <div className="sm:hidden">
+            <img src="/quotesai-img.png" alt="QuotesAI" className="w-full h-auto" />
+          </div>
+          <video muted loop className="hidden sm:block sm:w-[90%] sm:h-[90%] w-full h-auto">
+            <source src="/quotesai.mp4" type="video/mp4" />
+          </video>
           <h2 className="mt-4 text-lg font-bold text-gray-800 dark:text-gray-200">QuotesAI</h2>
           <p className="text-base text-gray-600 dark:text-gray-400">Ready-to-use Micro SaaS template built with NextAuth + Stripe support</p>
         </MagicCard>
