@@ -62,12 +62,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Head>
           <title>${siteConfig.name}</title>
           <meta property="og:url" content="https://ez-template1.vercel.app/" />
-          <meta property="og:image" content="/dashboard-dark.png" />
+          <meta property="og:image" content="/og.png" />
           <meta
             property="twitter:url"
             content="https://ez-template1.vercel.app/"
           />
-          <meta property="twitter:image" content="/dashboard-dark.png" />
+          <meta property="twitter:image" content="/og.png" />
         </Head>
         <body
           className={cn(
