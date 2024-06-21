@@ -16,7 +16,7 @@ export function MainNav() {
   return (
     <div className="mr-4 md:flex">
       <Link href="/" className="mr-6 flex items-center space-x-2">
-        <img src="/logo.svg" className="size-8" alt="Logo" />
+        <img src="/logo.svg" className="size-7" alt="Logo" />
         <span className="font-bold sm:inline-block">
           {siteConfig.name}
         </span>
