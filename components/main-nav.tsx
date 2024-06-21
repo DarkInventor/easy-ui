@@ -24,7 +24,7 @@ export function MainNav() {
       </Link>
       <nav className="hidden lg:flex lg:items-center lg:gap-6 text-sm">
         <Link
-          href="/docs"
+          href="/templates"
           className={cn(
             "transition-colors hover:text-foreground/80",
             pathname === "/docs" ? "text-foreground" : "text-foreground/60"

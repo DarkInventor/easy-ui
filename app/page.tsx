@@ -48,7 +48,7 @@ export default function IndexPage() {
   return (
     // <div className="container relative overflow-hidden">
     <section id="hero">
-      <SiteHeader />
+      {/* <SiteHeader /> */}
       {/* <div className="relative min-h-screen overflow-hidden py-0 sm:py-0 md:py-0 lg:py-5"> */}
         {/* <div className="z-10 flex flex-col"> */}
           {/* <div > */}
@@ -123,7 +123,7 @@ export default function IndexPage() {
                 </div>
               </div>
 
-              <div className="flex max-w-xl flex-row items-center justify-between text-balance p-0 pt-5 text-left text-base tracking-tight text-black md:text-center md:text-base dark:font-medium dark:text-white">
+              <div className="flex max-w-xl flex-row items-center justify-between text-balance p-5 text-left text-base tracking-tight text-black md:text-center md:text-base dark:font-medium dark:text-white">
                 <span className="mr-2 font-300 text-gray-600 dark:text-gray-400 text-md">
                   Trusted by
                 </span>
