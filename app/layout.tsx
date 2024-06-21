@@ -11,7 +11,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { SiteFooter } from "@/components/site-footer"
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://easy-3vdprxfnw-kathans-projects.vercel.app/'), // Change this line
+  metadataBase: new URL('https://easy-ui-sigma.vercel.app/'), // Change this line
   title: {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    url: 'https://easy-3vdprxfnw-kathans-projects.vercel.app/',
+    url: 'https://easy-ui-sigma.vercel.app/',
     title: siteConfig.name,
     description: siteConfig.description,
     images: [
@@ -61,11 +61,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <html lang="en" suppressHydrationWarning>
         <Head>
           <title>${siteConfig.name}</title>
-          <meta property="og:url" content="https://easy-3vdprxfnw-kathans-projects.vercel.app/" />
+          <meta property="og:url" content="https://easy-ui-sigma.vercel.app/" />
           <meta property="og:image" content="/og.png" />
           <meta
             property="twitter:url"
-            content="https://easy-3vdprxfnw-kathans-projects.vercel.app/"
+            content="https://easy-ui-sigma.vercel.app/"
           />
           <meta property="twitter:image" content="/og.png" />
         </Head>
