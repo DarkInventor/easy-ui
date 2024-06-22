@@ -5,13 +5,13 @@ import Head from "next/head"
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
+import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
-import { SiteFooter } from "@/components/site-footer"
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://easy-ui-sigma.vercel.app/'), // Change this line
+  metadataBase: new URL("https://easy-ui-sigma.vercel.app/"), // Change this line
   title: {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
@@ -27,29 +27,16 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    url: 'https://easy-ui-sigma.vercel.app/',
+    url: "https://easy-ui-sigma.vercel.app/",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [
-      { url: '/og.png', width: 800, height: 600, alt: siteConfig.name },
-    ],
+    images: [{ url: "/og.png", width: 800, height: 600, alt: siteConfig.name }],
     siteName: siteConfig.name,
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
   },
-  // The 'additionalMetaTags' property does not exist in the 'Metadata' type, thus it has been removed to resolve the error.
 }
-  // },
-  // additionalLinkTags: [
-  //   { rel: 'manifest', href: '/site.webmanifest' },
-  // ],
-  // additionalMetaTags: [
-  //   { name: 'twitter:card', content: 'summary_large_image' },
-  //   { property: 'og:image', content: '/path-to-your-image.jpg' },
-  //   // Add more custom tags as needed
-  // ],
-
 
 interface RootLayoutProps {
   children: React.ReactNode
@@ -72,19 +59,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <body
           className={cn(
             "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable,
+            fontSans.variable
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            {/* <div className="absolute flex min-h-screen flex-col"> */}
-              {/* <SiteHeader /> */}
-              <SiteHeader />
-              {/* <div className="container flex-1"> */}
-                {children}
-             
-              {/* </div> */}
-              <SiteFooter className="border-t" />
-            {/* </div> */}
+            <SiteHeader />
+            {children}
+            <SiteFooter className="border-t" />
             <TailwindIndicator />
           </ThemeProvider>
         </body>

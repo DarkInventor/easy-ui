@@ -22,7 +22,16 @@ function DesignfastPage() {
       </div>
       <div className="sm:w-1/2 p-4">
         <div className="flex justify-between">
-          <Button className="w-1/2 px-4 py-4 mr-2 " type="submit">
+          <Button
+            className="w-1/2 px-4 py-4 mr-2"
+            onClick={() => {
+              const link = document.createElement('a');
+              link.href = 'https://github.com/DarkInventor/designfast/archive/refs/heads/main.zip';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
+          >
             Download Template
           </Button>
           <Button
@@ -94,20 +103,6 @@ function DesignfastPage() {
             and maximum impact!
           </p>
         </div>
-        {/* <div className="text-center mt-8">
-          <p className="text-sm text-gray-600 dark:text-white">
-            Credits: This design is inspired from{" "}
-            <a
-              href="https://magicui.design"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 dark:text-white font-bold hover:underline"
-            >
-              Magic UI&apos;s official website
-            </a>
-            .
-          </p>
-        </div> */}
       </div>
     </div>
   )

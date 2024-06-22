@@ -69,9 +69,6 @@ function EzPage() {
         </ul>
         <p>Get started today and bring your website to life with minimal effort and maximum impact!</p>
       </div>
-      {/* <div className="text-center mt-8">
-        <p className="text-sm text-gray-600 dark:text-white">Credits: This design is inspired from <a href="https://magicui.design" target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-white font-bold hover:underline">Magic UI&apos;s official website</a>.</p>
-      </div> */}
       </div>
       
     </div>

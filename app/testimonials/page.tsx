@@ -88,7 +88,6 @@ const MarqueeDemo = () => {
                   <p className="text-muted-foreground sm:max-w-[85%] max-w-[85%] lg:max-w-[100%] md:max-w-[100%] pb-10 leading-normal sm:text-lg sm:leading-7">
                     Hear what <span className="font-bold">real people</span> have to say about us.
                   </p>
-                  {/* <MarqueeDemo /> */}
                 </div>
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (
