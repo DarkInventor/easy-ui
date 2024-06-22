@@ -74,6 +74,7 @@ export default function IndexPage() {
           <div className="flex w-full flex-col gap-2 sm:flex-row sm:gap-4">
             <Link
               href="/templates"
+              // eslint-disable-next-line tailwindcss/no-contradicting-classname
               className={cn(
                 buttonVariants({
                   variant: "default",
@@ -94,7 +95,7 @@ export default function IndexPage() {
                   variant: "outline",
                 }),
                 "gap-2 whitespace-pre md:flex",
-                "group relative w-full gap-1 overflow-hidden rounded-full text-sm font-semibold tracking-tighter transition-all duration-150 ease-in-out hover:ring-2 hover:ring-neutral-300 hover:ring-offset-2 hover:ring-offset-inherit dark:hover:ring-black dark:hover:ring-offset-black "
+                "group relative w-full overflow-hidden rounded-full text-sm font-semibold tracking-tighter transition-all duration-150 ease-in-out hover:ring-2 hover:ring-neutral-300 hover:ring-offset-2 hover:ring-offset-inherit dark:hover:ring-black dark:hover:ring-offset-black "
               )}
             >
               Get Easy MVP
