@@ -3,7 +3,7 @@ export type SiteConfig = typeof siteConfig
 export const siteConfig = {
   name: "Easy UI",
   description:
-    "Beautifully designed templates built with Magic UI and Tailwind CSS.",
+    "Beautifully designed website templates built with React and Tailwind CSS.",
   mainNav: [
     {
       title: "Features",
