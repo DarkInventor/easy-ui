@@ -11,7 +11,8 @@ function EzPage() {
     <div className="flex flex-wrap justify-center gap-4 pb-10">
          <div className="w-full sm:w-1/2 p-4 space-y-4 mt-5">
          <CardTitle className='text-4xl'>QuotesAI</CardTitle>
-         <CardDescription className='text-lg'>Ready-to-use boilerplate with built-in NextAuth support.</CardDescription>
+         <CardDescription className='text-lg'>Ready-to-use Micro-SaaS with built-in NextAuth support.</CardDescription>
+         <Badge className="hidden sm:inline-block" variant="destructive">We are currently working on this boilerplate. It might contain some bugs in it. (Beta)</Badge>
          </div>
       <div className="w-full sm:w-1/2 p-4 border rounded-lg ">
         <video muted loop className="w-full h-auto" autoPlay>
@@ -20,8 +21,14 @@ function EzPage() {
       </div>
       <div className="sm:w-1/2 p-4">       
         <div className="flex justify-between">
-          <Button className="w-1/2 px-4 py-4 mr-2 " type="submit">Download Template</Button>
-          <Button className="w-1/2 px-4 py-4 border shadow-sm ml-2 hover:bg-accent hover:text-accent-foreground " variant= "outline" type="submit"  onClick={() => window.open('https://quotesai.vercel.app/', '_blank')}>Live Preview<Icons.externalLink className="ml-1 p-1" /> </Button>
+          <Button className="w-1/2 px-4 py-4 mr-2 " type="submit" onClick={() => {
+              const link = document.createElement('a');
+              link.href = 'https://github.com/DarkInventor/quotes-template/archive/refs/heads/main.zip';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }} >Download Template</Button>
+          <Button className="w-1/2 px-4 py-4 border shadow-sm ml-2 hover:bg-accent hover:text-accent-foreground " variant= "outline" type="submit"  onClick={() => window.open('https://quotes-template.vercel.app/', '_blank')}>Live Preview<Icons.externalLink className="ml-1 p-1" /> </Button>
         </div>
 
       <div className="space-y-4">
