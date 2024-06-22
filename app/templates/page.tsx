@@ -45,6 +45,7 @@ export default function TemplatePage() {
         {/* </a> */}
         <MagicCard
           className="group cursor-pointer flex flex-col items-center justify-center overflow-hidden p-6 lg:p-10 sm:p-0 md:p-10 shadow-2xl"  
+          onClick={() => window.location.href='/designfast'}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
@@ -59,6 +60,7 @@ export default function TemplatePage() {
         </MagicCard>
         <MagicCard
           className="group cursor-pointer flex flex-col items-center justify-center overflow-hidden p-6 lg:p-10 sm:p-0 md:p-10 shadow-2xl"  
+          onClick={() => window.location.href='/quotesai'}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
@@ -69,7 +71,7 @@ export default function TemplatePage() {
             <source src="/quotesai.mp4" type="video/mp4" />
           </video>
           <h2 className="mt-4 text-lg font-bold text-gray-800 dark:text-gray-200">QuotesAI</h2>
-          <p className="text-base text-gray-600 dark:text-gray-400">Ready-to-use Micro SaaS template built with NextAuth + Stripe support</p>
+          <p className="text-base text-gray-600 dark:text-gray-400">Ready-to-use Micro SaaS template with NextAuth built-in. Stripe Coming soon.</p>
         </MagicCard>
         <MagicCard
           className="group cursor-pointer flex flex-col items-center justify-center overflow-hidden p-10 shadow-2xl"
