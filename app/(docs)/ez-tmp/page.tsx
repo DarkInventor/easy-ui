@@ -19,7 +19,13 @@ function EzPage() {
       </div>
       <div className="sm:w-1/2 p-4">       
         <div className="flex justify-between">
-          <Button className="w-1/2 px-4 py-4 mr-2 " type="submit">Download Template</Button>
+          <Button className="w-1/2 px-4 py-4 mr-2 " type="submit"  onClick={() => {
+              const link = document.createElement('a');
+              link.href = 'https://github.com/DarkInventor/ez-template1/archive/refs/heads/main.zip';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }} >Download Template</Button>
           <Button className="w-1/2 px-4 py-4 border shadow-sm ml-2 hover:bg-accent hover:text-accent-foreground " variant= "outline" type="submit"  onClick={() => window.open('https://ez-template1.vercel.app/', '_blank')}>Live Preview<Icons.externalLink className="ml-1 p-1" /> </Button>
         </div>
 
