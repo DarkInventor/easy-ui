@@ -39,7 +39,7 @@ function DesignfastPage() {
             variant="outline"
             type="submit"
             onClick={() =>
-              window.open("https://www.designfast.site/", "_blank")
+              window.open("https://designfastt.vercel.app/", "_blank")
             }
           >
             Live Preview
