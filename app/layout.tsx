@@ -9,9 +9,10 @@ import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://easy-ui-sigma.vercel.app/"), // Change this line
+  metadataBase: new URL("https://www.easyui.pro/"), // Change this line
   title: {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    url: "https://easy-ui-sigma.vercel.app/",
+    url: "https://www.easyui.pro/",
     title: siteConfig.name,
     description: siteConfig.description,
     images: [{ url: "/og.png", width: 800, height: 600, alt: siteConfig.name }],
@@ -48,11 +49,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <html lang="en" suppressHydrationWarning>
         <Head>
           <title>${siteConfig.name}</title>
-          <meta property="og:url" content="https://easy-ui-sigma.vercel.app/" />
+          <meta property="og:url" content="https://www.easyui.pro/" />
           <meta property="og:image" content="/og.png" />
           <meta
             property="twitter:url"
-            content="https://easy-ui-sigma.vercel.app/"
+            content="https://www.easyui.pro/"
           />
           <meta property="twitter:image" content="/og.png" />
         </Head>
@@ -62,6 +63,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable
           )}
         >
+          <Analytics/>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <SiteHeader />
             {children}
