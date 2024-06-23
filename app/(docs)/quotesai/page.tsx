@@ -16,7 +16,7 @@ function EzPage() {
          </div>
       <div className="w-full sm:w-1/2 p-4 border rounded-lg ">
         <video muted loop className="w-full h-auto" autoPlay>
-          <source src="/quotesai.mp4" type="video/mp4" />
+          <source src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/quotesai.mp4" type="video/mp4" />
         </video>
       </div>
       <div className="sm:w-1/2 p-4">       
