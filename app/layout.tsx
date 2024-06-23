@@ -10,6 +10,7 @@ import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Analytics } from "@vercel/analytics/react"
+import { SiteBanner } from "@/components/site-banner"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.easyui.pro/"), // Change this line
@@ -64,6 +65,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >
           <Analytics/>
+          <SiteBanner />
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <SiteHeader />
             {children}

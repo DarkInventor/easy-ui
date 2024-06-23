@@ -14,7 +14,7 @@ export default function CTASection() {
             <h1 className="text-3xl font-bold lg:text-4xl">
               Looking for MVP instead?
             </h1>
-            <p className="mt-2">Check Out Easy-MVP</p>
+            <p className="mt-2">Check Out Easy MVP</p>
             <a
               href="https://pro.magicui.design/"
               className={cn(
@@ -25,7 +25,7 @@ export default function CTASection() {
                 "group mt-4 rounded-[2rem] px-6",
               )}
             >
-              Check Out Easy-MVP
+              Check Out Easy MVP
               <ChevronRight className="ml-1 size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
             </a>
           </div>
