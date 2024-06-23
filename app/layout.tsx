@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: "https://www.easyui.pro/",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [{ url: "/og.png", width: 800, height: 600, alt: siteConfig.name }],
+    images: [{ url: "https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/og.png", width: 800, height: 600, alt: siteConfig.name }],
     siteName: siteConfig.name,
   },
   twitter: {
@@ -50,12 +50,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Head>
           <title>${siteConfig.name}</title>
           <meta property="og:url" content="https://www.easyui.pro/" />
-          <meta property="og:image" content="/og.png" />
+          <meta property="og:image" content="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/og.png" />
           <meta
             property="twitter:url"
             content="https://www.easyui.pro/"
           />
-          <meta property="twitter:image" content="/og.png" />
+          <meta property="twitter:image" content="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/og.png" />
         </Head>
         <body
           className={cn(
