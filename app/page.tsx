@@ -88,7 +88,7 @@ export default function IndexPage() {
               <ChevronRight className="ml-1 size-4 shrink-0 transition-all duration-300 ease-out group-hover:translate-x-1" />
             </Link>
             <Link
-              href="/docs"
+              href="https://mvp.easyui.pro/"
               className={cn(
                 buttonVariants({
                   size: "lg",

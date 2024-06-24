@@ -43,7 +43,7 @@ export function MainNav() {
           GitHub
         </Link>
         <Link
-          href="/blocks"
+          href="https://mvp.easyui.pro/"
           className={cn(
             "transition-colors hover:text-foreground/80 flex items-center",
             pathname?.startsWith("/blocks")

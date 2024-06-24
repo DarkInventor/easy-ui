@@ -16,7 +16,7 @@ export default function CTASection() {
             </h1>
             <p className="mt-2">Check Out Easy MVP</p>
             <a
-              href="https://pro.magicui.design/"
+              href="https://mvp.easyui.pro/"
               className={cn(
                 buttonVariants({
                   size: "lg",
