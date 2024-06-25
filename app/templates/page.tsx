@@ -74,6 +74,21 @@ export default function TemplatePage() {
           <p className="text-base text-gray-600 dark:text-gray-400">Ready-to-use Micro SaaS template with NextAuth built-in. Stripe Coming soon.</p>
         </MagicCard>
         <MagicCard
+          className="group cursor-pointer flex flex-col items-center justify-center overflow-hidden p-6 lg:p-10 sm:p-0 md:p-10 shadow-2xl"  
+          onClick={() => window.location.href='/retro'}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <div className="sm:hidden">
+            <img src="/retro.png" alt="QuotesAI" className="w-full h-auto" />
+          </div>
+          <video muted loop className="hidden sm:block sm:w-[90%] sm:h-[90%] w-full h-auto">
+            <source src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/retro.mp4" type="video/mp4" />
+          </video>
+          <h2 className="mt-4 text-lg font-bold text-gray-800 dark:text-gray-200">Retro</h2>
+          <p className="text-base text-gray-600 dark:text-gray-400">Retro themed Template</p>
+        </MagicCard>
+        <MagicCard
           className="group cursor-pointer flex flex-col items-center justify-center overflow-hidden p-10 shadow-2xl"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}

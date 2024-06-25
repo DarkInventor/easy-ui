@@ -36,6 +36,7 @@
     "command": "^0.0.5",
     "date-fns": "^3.6.0",
     "next": "^13.4.8",
+    "next-template": "link:",
     "next-themes": "^0.2.1",
     "posthog-js": "^1.140.1",
     "react": "^18.2.0",
