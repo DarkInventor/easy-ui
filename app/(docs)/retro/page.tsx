@@ -47,10 +47,7 @@ function EzPage() {
         <h3 className="text-xl font-semibold">Features</h3>
         <ul className="list-disc pl-5 space-y-2">
           <li>Header Section</li>
-          <li>Hero Section</li>
-          <li>Authentication</li>
-          <li>Social Proof Section</li>
-          <li>Pricing Section</li>
+          <li>Hero Section</li>   
           <li>Call To Action Section</li>
           <li>Footer Section</li>
           <li>Mobile Responsive Navbar</li>
