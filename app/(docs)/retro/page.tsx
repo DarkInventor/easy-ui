@@ -12,7 +12,7 @@ function EzPage() {
          <div className="w-full sm:w-1/2 p-4 space-y-4 mt-5">
          <CardTitle className='text-4xl'>Retro</CardTitle>
          <CardDescription className='text-lg'>Retro themed template</CardDescription>
-         {/* <Badge className="hidden sm:inline-block" variant="destructive">We are currently working on this boilerplate. It might contain some bugs in it. (Beta)</Badge> */}
+         <Badge className="hidden sm:inline-block bg-green-500">Our Top Choice for Light Mode Templates. </Badge>
          </div>
       <div className="w-full sm:w-1/2 p-4 border rounded-lg ">
         <video muted loop className="w-full h-auto" autoPlay>
