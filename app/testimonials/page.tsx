@@ -67,7 +67,7 @@ const ReviewCard = ({
         )}
       >
         <div className="flex flex-row items-center gap-2">
-            <img className="rounded-full" width="32" height="32" alt="" src="https://img.icons8.com/?size=100&id=114445&format=png&color=000000" />
+            <img className="rounded-full" width="32" height="32" alt="" src="https://img.icons8.com/?size=100&id=44019&format=png&color=000000" />
           <div className="flex flex-col">
             <figcaption className="text-sm font-medium dark:text-white">
               {name}
