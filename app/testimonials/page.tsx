@@ -3,28 +3,39 @@ import Marquee from "@/components/magicui/marquee";
 
 const reviews = [
   {
-    name: "Kathan",
-    username: "@kathanmehtaa",
-    body: "We Don't have any testimonials as we just launched.",
-    img: "https://avatar.vercel.sh/jane",
+    name: "Marcello Fonseca",
+    username: "@Marcello Fonseca",
+    body: "Very Nice!! 🔥🤯",
+    img: "https://avatar.vercel.sh/Marcello",
+    link: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7211502593452216320?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7211502593452216320%2C7211504229494984705%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287211504229494984705%2Curn%3Ali%3AugcPost%3A7211502593452216320%29"
   },
   {
-    name: "Kathan",
-    username: "@kathanmehtaa",
-    body: "We Don't have any testimonials as we just launched.",
-    img: "https://avatar.vercel.sh/jane",
+    name: "Sayed Suliman",
+    username: "@Sayed Suliman",
+    body: "Can't wait! 🤯",
+    img: "https://avatar.vercel.sh/Sayed",
+    link: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7211502593452216320?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7211502593452216320%2C7211524681336553473%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287211524681336553473%2Curn%3Ali%3AugcPost%3A7211502593452216320%29"
   },
   {
-    name: "Jenny",
-    username: "@jenny",
-    body: "We Don't have any testimonials as we just launched.",
-    img: "https://avatar.vercel.sh/jenny",
+    name: "Danny Chen",
+    username: "@Danny Chen",
+    body: "That is smooth like butter 🔥",
+    img: "https://avatar.vercel.sh/Danny",
+    link: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7211502593452216320?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7211502593452216320%2C7211509809668366336%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287211509809668366336%2Curn%3Ali%3AugcPost%3A7211502593452216320%29"
   },
   {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "Dally R",
+    username: "@Dally R",
+    body: "Great job! Love this. I will go through and provide the feedback.",
     img: "https://avatar.vercel.sh/james",
+    link: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7210915776176791555?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7210915776176791555%2C7211017051711111169%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287211017051711111169%2Curn%3Ali%3AugcPost%3A7210915776176791555%29"
+  },
+  {
+    name: "Jerome Renard",
+    username: "@Jerome Renard",
+    body: "Looking really good!",
+    img: "https://avatar.vercel.sh/james",
+    link: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7210915776176791555?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7210915776176791555%2C7211032199658102784%29&replyUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7210915776176791555%2C7211032581247537153%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287211032199658102784%2Curn%3Ali%3AugcPost%3A7210915776176791555%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287211032581247537153%2Curn%3Ali%3AugcPost%3A7210915776176791555%29"
   },
 ];
 
@@ -36,33 +47,37 @@ const ReviewCard = ({
   name,
   username,
   body,
+  link,
 }: {
   img: string;
   name: string;
   username: string;
   body: string;
+  link: string;
 }) => {
   return (
-    <figure
-      className={cn(
-        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
-        // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
-      )}
-    >
-      <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
-        <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
-            {name}
-          </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{username}</p>
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      <figure
+        className={cn(
+          "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+          // light styles
+          "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+          // dark styles
+          "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+        )}
+      >
+        <div className="flex flex-row items-center gap-2">
+            <img className="rounded-full" width="32" height="32" alt="" src="https://img.icons8.com/?size=100&id=114445&format=png&color=000000" />
+          <div className="flex flex-col">
+            <figcaption className="text-sm font-medium dark:text-white">
+              {name}
+            </figcaption>
+            <p className="text-xs font-medium dark:text-white/40">{username}</p>
+          </div>
         </div>
-      </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
-    </figure>
+        <blockquote className="mt-2 text-sm">{body}</blockquote>
+      </figure>
+    </a>
   );
 };
 
@@ -87,8 +102,8 @@ const MarqueeDemo = () => {
           <ReviewCard key={review.username} {...review} />
         ))}
       </Marquee>
-      <div className="dark:from-background pointer-events-none absolute inset-y-0 left-0 w-2/5 bg-gradient-to-r from-white"></div>
-      <div className="dark:from-background pointer-events-none absolute inset-y-0 right-0 w-2/5 bg-gradient-to-l from-white"></div>
+      {/* <div className="dark:from-background pointer-events-none absolute inset-y-0 left-0 w-2/5 bg-gradient-to-r from-white"></div>
+      <div className="dark:from-background pointer-events-none absolute inset-y-0 right-0 w-2/5 bg-gradient-to-l from-white"></div> */}
     </div>
   );
 };

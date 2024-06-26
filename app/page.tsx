@@ -110,7 +110,7 @@ export default function IndexPage() {
           </span>
           <AvatarCircles numPeople={99} avatarUrls={avatarUrls} />
         </div>
-        {/* <MarqueeDemo /> */}
+        <MarqueeDemo />
       </div>
 
       <div className="pt-12 sm:pt-8 lg:pt-25 mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
