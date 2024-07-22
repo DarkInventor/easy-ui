@@ -12,7 +12,7 @@ function EzNextUI() {
          <div className="w-full sm:w-1/2 p-4 space-y-4 mt-5">
          <CardTitle className='text-4xl'>Easy Landing Docs</CardTitle>
          <CardDescription className='text-lg'>High Quality template with Landing Page and Documentation Section</CardDescription>
-         <Badge className="hidden sm:inline-block" variant="green">Accernity UI + Shadcn UI Combo</Badge>
+         <Badge className="hidden sm:inline-block" variant="green">Aceternity UI + Shadcn UI Combo</Badge>
          </div>
       <div className="w-full sm:w-1/2 p-4 border rounded-lg ">
         <video muted loop className="w-full h-auto" autoPlay>
@@ -33,7 +33,7 @@ function EzNextUI() {
 
       <div className="space-y-4">
         <h2 className="text-2xl font-bold pt-10">Why Should I Use This Template?</h2>
-        <p>This template is built specially for Accernity UI Lovers ❤️, UI/Component or Any Libary Builders, Indiehackers, Software Devs, and Software Entrepreneurs. Here’s why this template is perfect for you:</p>
+        <p>This template is built specially for Aceternity UI Lovers ❤️, UI/Component or Any Libary Builders, Indiehackers, Software Devs, and Software Entrepreneurs. Here’s why this template is perfect for you:</p>
         <ul className="list-disc pl-5 space-y-2 ">
           <li>✅ Save your time</li>
           <li>✅ No need to learn advanced animations</li>
@@ -55,7 +55,7 @@ function EzNextUI() {
           <li>React</li>
           <li>Next.js</li>
           <li>Tailwind CSS</li>               
-          <li>Acernity UI</li>
+          <li>Aceternity UI</li>
           <li>Shadcn UI</li>
           <li>Framer Motion</li>
           <li>Vercel</li>        
