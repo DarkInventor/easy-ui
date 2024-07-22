@@ -6,63 +6,58 @@ import { Button } from '@/components/ui/button'
 import { Card, CardDescription, CardTitle } from '@/components/ui/card'
 import React from 'react'
 
-function EzPage() {
+function EzNextUI() {
   return (
     <div className="flex flex-wrap justify-center gap-4 pb-10">
          <div className="w-full sm:w-1/2 p-4 space-y-4 mt-5">
-         <CardTitle className='text-4xl'>Retro</CardTitle>
-         <CardDescription className='text-lg'>Retro themed template</CardDescription>
-         <Badge className="hidden sm:inline-block bg-green-500">Our Top Choice for Light Mode Templates. </Badge>
+         <CardTitle className='text-4xl'>Easy Landing Docs</CardTitle>
+         <CardDescription className='text-lg'>High Quality template with Landing Page and Documentation Section</CardDescription>
+         <Badge className="hidden sm:inline-block" variant="green">Accernity UI + Shadcn UI Combo</Badge>
          </div>
       <div className="w-full sm:w-1/2 p-4 border rounded-lg ">
         <video muted loop className="w-full h-auto" autoPlay>
-          <source src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/retro.mp4" type="video/mp4" />
+          <source src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/ez-landing-docs.mp4" type="video/mp4" />
         </video>
       </div>
       <div className="sm:w-1/2 p-4">       
         <div className="flex justify-between">
           <Button className="w-1/2 px-4 py-4 mr-2 " type="submit" onClick={() => {
               const link = document.createElement('a');
-              link.href = 'https://github.com/DarkInventor/retro-template/archive/refs/heads/main.zip';
+              link.href = 'https://github.com/DarkInventor/easy-landing-docs/archive/refs/heads/main.zip';
               document.body.appendChild(link);
               link.click();
               document.body.removeChild(link);
             }} >Download Template</Button>
-          <Button className="w-1/2 px-4 py-4 border shadow-sm ml-2 hover:bg-accent hover:text-accent-foreground " variant= "outline" type="submit"  onClick={() => window.open('https://retro-template.vercel.app/', '_blank')}>Live Preview<Icons.externalLink className="ml-1 p-1" /> </Button>
+          <Button className="w-1/2 px-4 py-4 border shadow-sm ml-2 hover:bg-accent hover:text-accent-foreground " variant= "outline" type="submit"  onClick={() => window.open('https://easy-landing-docs.vercel.app/', '_blank')}>Live Preview<Icons.externalLink className="ml-1 p-1" /> </Button>
         </div>
 
       <div className="space-y-4">
         <h2 className="text-2xl font-bold pt-10">Why Should I Use This Template?</h2>
-        <p>This template is built with keeping retro vibes in mind. If you are someone who likes retro animations its for you. Here’s why this template is perfect for you:</p>
+        <p>This template is built specially for Accernity UI Lovers ❤️, UI/Component or Any Libary Builders, Indiehackers, Software Devs, and Software Entrepreneurs. Here’s why this template is perfect for you:</p>
         <ul className="list-disc pl-5 space-y-2 ">
-          <li>✅ Save 150+ hours of work </li>
+          <li>✅ Save your time</li>
           <li>✅ No need to learn advanced animations</li>
-          <li>✅ Built in Authentication</li>
           <li>✅ Easy to configure and change</li>
           <li>✅ 1-click download and setup</li>
           <li>✅ 5 minutes to update the text and images</li>
           <li>✅ Deploy live to Vercel</li>
-          {/* <li>Stripe Integration <Badge className="hidden sm:inline-block" variant="secondary">Coming Soon</Badge></li> */}
         </ul>
-        <h3 className="text-xl font-semibold">Features</h3>
+        {/* <h3 className="text-xl font-semibold">Features</h3>
         <ul className="list-disc pl-5 space-y-2">
           <li>Header Section</li>
-          <li>Hero Section</li>   
+          <li>Hero Section</li>
+          <li>Social Media Section</li>
           <li>Call To Action Section</li>
-          <li>Footer Section</li>
-          <li>Mobile Responsive Navbar</li>
-          {/* <li>Payment Gateway <Badge className="hidden sm:inline-block" variant="secondary">Coming Soon</Badge></li> */}
-        </ul>
+          <li>Mobile Responsive </li>
+        </ul> */}
         <h3 className="text-xl font-semibold">Tech Stack</h3>
         <ul className="list-disc pl-5 space-y-2">
           <li>React</li>
           <li>Next.js</li>
-          <li>Tailwind CSS</li>
-          {/* <li>Prisma</li> */}
-          {/* <li>NextAuth</li>          */}
-          <li>Magic UI</li>
+          <li>Tailwind CSS</li>               
+          <li>Acernity UI</li>
           <li>Shadcn UI</li>
-          {/* <li>Stripe</li> */}
+          <li>Framer Motion</li>
           <li>Vercel</li>        
         </ul>
         <h3 className="text-xl font-semibold">Quick Setup</h3>
@@ -80,4 +75,4 @@ function EzPage() {
   )
 }
 
-export default EzPage
+export default EzNextUI

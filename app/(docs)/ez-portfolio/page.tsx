@@ -86,7 +86,7 @@ function EzPortfolio() {
             <li>Tailwind CSS</li>
             <li>Headless UI</li>
             <li>MDX</li>
-            <li>Vecrel</li>
+            <li>Vercel</li>
           </ul>
           <h3 className="text-xl font-semibold">Project Structure</h3>
           <ul className="list-disc space-y-2">

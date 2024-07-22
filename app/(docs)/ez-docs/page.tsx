@@ -57,7 +57,7 @@ function EzDocs() {
           <li>Tailwind CSS</li>               
           <li>Shadcn UI</li>
           <li>Fumadocs</li>
-          <li>Vecrel</li>        
+          <li>Vercel</li>        
         </ul>
         <h3 className="text-xl font-semibold">Quick Setup</h3>
         <ul className="list-disc pl-5 space-y-2">
