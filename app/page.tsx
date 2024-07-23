@@ -41,18 +41,18 @@ export default function IndexPage() {
   ]
   return (
     <section id="hero">
-      <div className="flex flex-col items-start gap-6 mt-20 px-7 text-center md:items-center pb-0 lg:pb-14 md:pb-14 sm:pb-0">
+      <div className="flex flex-col items-start gap-6 mt-20 lg:mt-10 md:mt-10 px-7 text-center md:items-center pb-0 lg:pb-14 md:pb-14 sm:pb-0">
         <Announcement />
         <div className="relative flex flex-col gap-4 md:items-center lg:flex-row">
-          <h1 className="relative mx-0 max-w-[43.5rem] text-balance bg-gradient-to-br from-black from-50% to-neutral-200/60 bg-clip-text pt-5 text-left text-5xl font-semibold tracking-tighter text-transparent sm:text-7xl md:mx-auto md:px-4 md:py-2 md:text-center md:text-7xl lg:text-7xl dark:text-white">
-            Templates for Web Designers
+          <h1 className="relative mx-0 max-w-[38.5rem] text-balance bg-gradient-to-br from-black from-50% to-neutral-200/60 bg-clip-text pt-5 text-left text-5xl font-semibold tracking-tighter text-transparent sm:text-7xl md:mx-auto md:px-4 md:py-2 md:text-center md:text-7xl lg:text-7xl dark:text-white">
+            Landing Page Templates that Convert 
           </h1>
-          <span className="text-neutral-90 absolute -top-3.5 left-0 z-10 rotate-3 whitespace-nowrap rounded-full bg-neutral-800 px-2.5 py-1 text-[11px] font-semibold uppercase leading-5 tracking-wide text-white md:top-12 md:-rotate-12">
-            100% high-quality
+          <span className="text-neutral-90 absolute -top-3.5 left-0 z-10 rotate-3 whitespace-nowrap rounded-full bg-neutral-800 px-2.5 py-1 text-[12px] font-semibold uppercase leading-5 tracking-wide text-white md:top-12 md:-rotate-12">
+            100% free
           </span>
         </div>
         <p className="max-w-xl text-balance text-left text-base tracking-tight text-black md:text-center md:text-lg dark:font-medium dark:text-white">
-          50+ free and animated templates built with{" "}
+          50+ <b>High Quality</b> templates built with{" "}
           <span className="font-bold text-black dark:text-white">Next.js, React</span>,{" "}
           <span className="font-bold text-black dark:text-white">
             Typescript

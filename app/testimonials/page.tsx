@@ -6,7 +6,7 @@ const reviews = [
     name: "Marcello Fonseca",
     username: "@Marcello Fonseca",
     body: "Very Nice!! 🔥🤯",
-    img: "https://media.licdn.com/dms/image/D4E03AQFmHc1nC7UNJA/profile-displayphoto-shrink_400_400/0/1687119830489?e=1726099200&v=beta&t=X9MGton6VSft9kUi-5rKG6Vtoa6XQ0BzsbDujbRvo3o",
+    img: "https://avatar.vercel.sh/rauchg.svg?text=MF",
     link: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7211502593452216320?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7211502593452216320%2C7211504229494984705%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287211504229494984705%2Curn%3Ali%3AugcPost%3A7211502593452216320%29"
   },
   {
