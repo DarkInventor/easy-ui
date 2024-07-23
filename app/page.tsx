@@ -53,7 +53,7 @@ export default function IndexPage() {
         </div>
         <p className="max-w-xl text-balance text-left text-base tracking-tight text-black md:text-center md:text-lg dark:font-medium dark:text-white">
           50+ free and animated templates built with{" "}
-          <span className="font-bold text-black dark:text-white">React</span>,{" "}
+          <span className="font-bold text-black dark:text-white">Next.js, React</span>,{" "}
           <span className="font-bold text-black dark:text-white">
             Typescript
           </span>
@@ -61,8 +61,7 @@ export default function IndexPage() {
           <span className="font-bold text-black dark:text-white">
             Tailwind CSS
           </span>
-          ,{" "}
-          <span className="font-bold text-black dark:text-white">Magic-UI</span>
+       
           , and{" "}
           <span className="font-bold text-black dark:text-white">
             Framer Motion
