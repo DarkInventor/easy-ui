@@ -11,6 +11,7 @@ import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Analytics } from "@vercel/analytics/react"
 import { SiteBanner } from "@/components/site-banner"
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.easyui.pro/"), // Change this line
@@ -57,6 +58,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             content="https://www.easyui.pro/"
           />
           <meta property="twitter:image" content="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/og.png" />
+          
         </Head>
         <body
           className={cn(
@@ -65,6 +67,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >
           <Analytics/>
+          <GoogleAnalytics gaId="G-0RXSHN6M9R" />
           <SiteBanner />
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <SiteHeader />
