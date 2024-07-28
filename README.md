@@ -17,7 +17,7 @@ Visit https://www.easyui.pro/templates to view the templates.
 
 ## Contributing
 
-Visit https://github.com/DarkInventor/easy-ui/blob/main/CONTRIBUTING.md to learn how to contribute. It only takes ~5 minutes to add your own!
+Visit our [contributing guide](https://github.com/DarkInventor/easy-ui/blob/main/CONTRIBUTING.md) to learn how to contribute. It only takes ~5 minutes to add your own!
 
 ## Deploy
 
