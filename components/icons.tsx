@@ -8,7 +8,7 @@ import {
   Linkedin,
   type Icon as LucideIcon,
 } from "lucide-react"
-
+import { DiscordLogoIcon } from '@radix-ui/react-icons'
 export type Icon = LucideIcon
 
 export const Icons = {
@@ -18,6 +18,8 @@ export const Icons = {
   externalLink: ExternalLink,
   github: Github,
   linkedin: Linkedin,
+  discord: DiscordLogoIcon,
+  
   logo: (props: LucideProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
       <path

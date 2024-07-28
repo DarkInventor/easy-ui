@@ -33,6 +33,22 @@ export function SiteHeader() {
                 size="icon"
                 onClick={() =>
                   window.open(
+                    "https://discord.gg/3p7WYQ9N",
+                    "_blank"
+                  )
+                }
+              >
+                <Icons.discord
+                  width="23"
+                  height={23}
+                  className="text-gray-500 dark:text-gray-600"
+                />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() =>
+                  window.open(
                     "https://github.com/DarkInventor/easy-ui",
                     "_blank"
                   )
