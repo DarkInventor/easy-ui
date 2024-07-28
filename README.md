@@ -15,6 +15,10 @@
 
 Visit https://www.easyui.pro/templates to view the templates.
 
+## Contributing
+
+Visit https://github.com/DarkInventor/easy-ui/blob/main/CONTRIBUTING.md to learn how to contribute. It only takes ~5 minutes to add your own!
+
 ## Deploy
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FDarkInventor%2Feasy-ui)
