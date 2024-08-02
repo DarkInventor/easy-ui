@@ -209,6 +209,21 @@ export default function TemplatePage() {
           <p className="text-base text-gray-600 dark:text-gray-400">Lightweight blog built using contentlayer</p>
         </MagicCard>
         <MagicCard
+          className="group cursor-pointer flex flex-col items-center justify-center overflow-hidden p-6 lg:p-10 sm:p-0 md:p-10 shadow-2xl"  
+          onClick={() => window.location.href='/ez-shots'}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <div className="sm:hidden">
+            <img src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/ez-shots.png" alt="EasyWaitlist" className="w-full h-auto" />
+          </div>
+          <video muted loop className="hidden sm:block sm:w-[90%] sm:h-[90%] w-full h-auto">
+            <source src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/easy-shots.mp4" type="video/mp4" />
+          </video>
+          <h2 className="mt-4 text-lg font-bold text-gray-800 dark:text-gray-200">Easy Shots</h2>
+          <p className="text-base text-gray-600 dark:text-gray-400">Create Beautiful Images from your Screenshots</p>
+        </MagicCard>
+        <MagicCard
           className="group cursor-pointer flex flex-col items-center justify-center overflow-hidden p-10 shadow-2xl"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
