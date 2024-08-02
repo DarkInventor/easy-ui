@@ -32,12 +32,13 @@ export default function TemplatePage() {
              onMouseEnter={handleMouseEnter} // Add this line
             onMouseLeave={handleMouseLeave} // And this line
           >
-            <div className="sm:hidden">
+            {/* <div className="sm:hidden">
               <img src="/eztmp1-img.png" alt="Easy Template" className="w-full h-auto" />
             </div>
             <video muted loop className="hidden sm:block sm:w-[90%] sm:h-[90%] w-full h-auto">
               <source src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/eztmp1.mp4" type="video/mp4" />
-            </video>
+            </video> */}
+            <img src="/eztmp1-img.png" alt="Easy Template" className="w-full h-auto" />
             <h2 className="mt-4 text-lg font-bold text-gray-800 dark:text-gray-200">Easy Template</h2>
             <p className="text-base text-gray-600 dark:text-gray-400">Template suitable for SaaS Products</p>
           </MagicCard>
@@ -49,12 +50,13 @@ export default function TemplatePage() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="sm:hidden">
+          {/* <div className="sm:hidden">
             <img src="/designfast-img.png" alt="Designfast" className="w-full h-auto" />
           </div>
           <video muted loop className="hidden sm:block sm:w-[90%] sm:h-[90%] w-full h-auto">
             <source src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/designfast.mp4" type="video/mp4" />
-          </video>
+          </video> */}
+          <img src="/designfast-img.png" alt="Designfast" className="w-full h-auto" />
           <h2 className="mt-4 text-lg font-bold text-gray-800 dark:text-gray-200">Designfast</h2>
           <p className="text-base text-gray-600 dark:text-gray-400">Minimal template designed for Service business</p>
         </MagicCard>
@@ -64,12 +66,13 @@ export default function TemplatePage() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="sm:hidden">
+          {/* <div className="sm:hidden">
             <img src="/quotesai-img.png" alt="QuotesAI" className="w-full h-auto" />
           </div>
           <video muted loop className="hidden sm:block sm:w-[90%] sm:h-[90%] w-full h-auto">
             <source src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/quotesai.mp4" type="video/mp4" />
-          </video>
+          </video> */}
+          <img src="/quotesai-img.png" alt="QuotesAI" className="w-full h-auto" />
           <h2 className="mt-4 text-lg font-bold text-gray-800 dark:text-gray-200">QuotesAI</h2>
           <p className="text-base text-gray-600 dark:text-gray-400">Ready-to-use Micro SaaS template with NextAuth built-in. Stripe Coming soon.</p>
         </MagicCard>
@@ -79,12 +82,13 @@ export default function TemplatePage() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="sm:hidden">
+          {/* <div className="sm:hidden">
             <img src="/retro.png" alt="QuotesAI" className="w-full h-auto" />
-          </div>
-          <video muted loop className="hidden sm:block sm:w-[90%] sm:h-[90%] w-full h-auto">
+          </div> */}
+          {/* <video muted loop className="hidden sm:block sm:w-[90%] sm:h-[90%] w-full h-auto">
             <source src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/retro.mp4" type="video/mp4" />
-          </video>
+          </video> */}
+          <img src="/retro.png" alt="QuotesAI" className="w-full h-auto" />
           <h2 className="mt-4 text-lg font-bold text-gray-800 dark:text-gray-200">Retro</h2>
           <p className="text-base text-gray-600 dark:text-gray-400">Retro themed Template</p>
         </MagicCard>
@@ -94,12 +98,13 @@ export default function TemplatePage() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="sm:hidden">
+          {/* <div className="sm:hidden">
             <img src="/easy-waitlist.png" alt="EasyWaitlist" className="w-full h-auto" />
           </div>
           <video muted loop className="hidden sm:block sm:w-[90%] sm:h-[90%] w-full h-auto">
             <source src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/easy-waitlist.mp4" type="video/mp4" />
-          </video>
+          </video> */}
+          <img src="/easy-waitlist.png" alt="EasyWaitlist" className="w-full h-auto" />
           <h2 className="mt-4 text-lg font-bold text-gray-800 dark:text-gray-200">Easy Waitlist</h2>
           <p className="text-base text-gray-600 dark:text-gray-400">Waitlist Page for pre-launching product or to find PMF</p>
         </MagicCard>
@@ -109,12 +114,13 @@ export default function TemplatePage() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="sm:hidden">
+          {/* <div className="sm:hidden">
             <img src="/easy-chatbot.png" alt="EasyWaitlist" className="w-full h-auto" />
           </div>
           <video muted loop className="hidden sm:block sm:w-[90%] sm:h-[90%] w-full h-auto">
             <source src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/easy-chatbot.mp4" type="video/mp4" />
-          </video>
+          </video> */}
+            <img src="/easy-chatbot.png" alt="EasyWaitlist" className="w-full h-auto" />
           <h2 className="mt-4 text-lg font-bold text-gray-800 dark:text-gray-200">Easy Chatbot</h2>
           <p className="text-base text-gray-600 dark:text-gray-400">Ready-to-integrate Chatbot Template</p>
         </MagicCard>
@@ -124,12 +130,13 @@ export default function TemplatePage() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="sm:hidden">
+          {/* <div className="sm:hidden">
             <img src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/Screenshot%202024-07-16%20at%2010.13.43%E2%80%AFAM.png" alt="EasyWaitlist" className="w-full h-auto" />
           </div>
           <video muted loop className="hidden sm:block sm:w-[90%] sm:h-[90%] w-full h-auto">
             <source src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/EasyDocs.mp4" type="video/mp4" />
-          </video>
+          </video> */}
+          <img src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/Screenshot%202024-07-16%20at%2010.13.43%E2%80%AFAM.png" alt="EasyWaitlist" className="w-full h-auto" />
           <h2 className="mt-4 text-lg font-bold text-gray-800 dark:text-gray-200">Easy Docs</h2>
           <p className="text-base text-gray-600 dark:text-gray-400">Simplest implementation of Fumadocs</p>
         </MagicCard>
@@ -139,12 +146,13 @@ export default function TemplatePage() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="sm:hidden">
+          {/* <div className="sm:hidden">
             <img src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/Screenshot%202024-07-18%20at%201.35.27%E2%80%AFPM.png" alt="EasyWaitlist" className="w-full h-auto" />
           </div>
           <video muted loop className="hidden sm:block sm:w-[90%] sm:h-[90%] w-full h-auto">
             <source src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/easy-nextui.mp4" type="video/mp4" />
-          </video>
+          </video> */}
+           <img src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/Screenshot%202024-07-18%20at%201.35.27%E2%80%AFPM.png" alt="EasyWaitlist" className="w-full h-auto" />
           <h2 className="mt-4 text-lg font-bold text-gray-800 dark:text-gray-200">Easy NextUI</h2>
           <p className="text-base text-gray-600 dark:text-gray-400">Landing page built using NextUI</p>
         </MagicCard>
@@ -154,12 +162,13 @@ export default function TemplatePage() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="sm:hidden">
+          {/* <div className="sm:hidden">
             <img src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/Screenshot%202024-07-19%20at%203.33.40%E2%80%AFAM.png" alt="EasyWaitlist" className="w-full h-auto" />
           </div>
           <video muted loop className="hidden sm:block sm:w-[90%] sm:h-[90%] w-full h-auto">
             <source src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/easy-portfolio.mp4" type="video/mp4" />
-          </video>
+          </video> */}
+          <img src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/Screenshot%202024-07-19%20at%203.33.40%E2%80%AFAM.png" alt="EasyWaitlist" className="w-full h-auto" />
           <h2 className="mt-4 text-lg font-bold text-gray-800 dark:text-gray-200">Easy Portfolio</h2>
           <p className="text-base text-gray-600 dark:text-gray-400">Portfolio template with Blog</p>
         </MagicCard>
@@ -169,12 +178,13 @@ export default function TemplatePage() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="sm:hidden">
+          {/* <div className="sm:hidden">
             <img src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/ez-landing-docs.png" alt="EasyWaitlist" className="w-full h-auto" />
           </div>
           <video muted loop className="hidden sm:block sm:w-[90%] sm:h-[90%] w-full h-auto">
             <source src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/ez-landing-docs.mp4" type="video/mp4" />
-          </video>
+          </video> */}
+           <img src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/ez-landing-docs.png" alt="EasyWaitlist" className="w-full h-auto" />
           <h2 className="mt-4 text-lg font-bold text-gray-800 dark:text-gray-200">Easy Landing Docs</h2>
           <p className="text-base text-gray-600 dark:text-gray-400">Landing page with docs</p>
         </MagicCard>
@@ -184,12 +194,13 @@ export default function TemplatePage() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="sm:hidden">
+          {/* <div className="sm:hidden">
             <img src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/easy-dashboard.png" alt="EasyWaitlist" className="w-full h-auto" />
           </div>
           <video muted loop className="hidden sm:block sm:w-[90%] sm:h-[90%] w-full h-auto">
             <source src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/ez-dashboard.mp4" type="video/mp4" />
-          </video>
+          </video> */}
+           <img src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/easy-dashboard.png" alt="EasyWaitlist" className="w-full h-auto" />
           <h2 className="mt-4 text-lg font-bold text-gray-800 dark:text-gray-200">Easy Dashboard UI</h2>
           <p className="text-base text-gray-600 dark:text-gray-400">Dashboard UI built using Shadcn Charts</p>
         </MagicCard>
@@ -199,12 +210,13 @@ export default function TemplatePage() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="sm:hidden">
+          {/* <div className="sm:hidden">
             <img src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/ez-blog.png" alt="EasyWaitlist" className="w-full h-auto" />
           </div>
           <video muted loop className="hidden sm:block sm:w-[90%] sm:h-[90%] w-full h-auto">
             <source src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/easy-blog.mp4" type="video/mp4" />
-          </video>
+          </video> */}
+          <img src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/ez-blog.png" alt="EasyWaitlist" className="w-full h-auto" />
           <h2 className="mt-4 text-lg font-bold text-gray-800 dark:text-gray-200">Easy Blog</h2>
           <p className="text-base text-gray-600 dark:text-gray-400">Lightweight blog built using contentlayer</p>
         </MagicCard>
@@ -214,12 +226,13 @@ export default function TemplatePage() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="sm:hidden">
+          {/* <div className="sm:hidden">
             <img src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/ez-shots.png" alt="EasyWaitlist" className="w-full h-auto" />
           </div>
           <video muted loop className="hidden sm:block sm:w-[90%] sm:h-[90%] w-full h-auto">
             <source src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/easy-shots.mp4" type="video/mp4" />
-          </video>
+          </video> */}
+          <img src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/ez-shots.png" alt="EasyWaitlist" className="w-full h-auto" />
           <h2 className="mt-4 text-lg font-bold text-gray-800 dark:text-gray-200">Easy Shots</h2>
           <p className="text-base text-gray-600 dark:text-gray-400">Create Beautiful Images from your Screenshots</p>
         </MagicCard>
