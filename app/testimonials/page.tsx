@@ -27,7 +27,7 @@ const reviews = [
     name: "Dally R",
     username: "@Dally R",
     body: "Great job! Love this. I will go through and provide the feedback.",
-    img: "https://media.licdn.com/dms/image/D4D35AQEl_EU_CVGi_w/profile-framedphoto-shrink_800_800/0/1711663894244?e=1721984400&v=beta&t=U6T8wSLRt7sEzlUWkIrT9OG_M3FXqUIAHJ2cSjv8Ocg",
+    img: "https://avatar.vercel.sh/rauchg.svg?text=DR",
     link: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7210915776176791555?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7210915776176791555%2C7211017051711111169%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287211017051711111169%2Curn%3Ali%3AugcPost%3A7210915776176791555%29"
   },
   {
