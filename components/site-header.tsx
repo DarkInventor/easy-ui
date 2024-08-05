@@ -33,7 +33,7 @@ export function SiteHeader() {
                 size="icon"
                 onClick={() =>
                   window.open(
-                    "https://discord.gg/3p7WYQ9N",
+                    "https://discord.gg/7yTP7KGK",
                     "_blank"
                   )
                 }
