@@ -17,7 +17,7 @@ import IntroductionPage from '../(docs)/introduction/page'
 import CreateNewComponentt from '../(docs)/create-new-component/page'
 // import LaunchpadComponent from '../(docs)/launchpad-component/page'
 import KeyButton from '@/components/easyui/key-button'
-import { KeyboardIcon, Pencil1Icon, QuestionMarkCircledIcon, QuestionMarkIcon, StarFilledIcon, StarIcon } from '@radix-ui/react-icons'
+import { BadgeIcon, KeyboardIcon, Pencil1Icon, QuestionMarkCircledIcon, QuestionMarkIcon, StarFilledIcon, StarIcon } from '@radix-ui/react-icons'
 import SparkleButton from '@/components/easyui/sparkle-button'
 import KeyButtonComponent from '../(docs)/key-button-component/page'
 import SparkleButtonComponent from '../(docs)/sparkle-button-component/page'
@@ -33,6 +33,7 @@ import FeatureCard from '@/components/easyui/feature-card'
 import Features from '../features/page'
 import FeatureCardComponent from '../(docs)/feature-card-component/page'
 import HexagonHeroComponent from '../(docs)/hexagon-hero-component/page'
+import AnimatedBadgeComponent from '../(docs)/animated-badge-component/page'
 
 interface Item {
   name: string;
@@ -53,6 +54,7 @@ const components: Item[] = [
   { name: 'sign animation', isNew: true},
   { name: 'feature card', isNew: true},
   { name: 'hexagon hero', isNew: true},
+  { name: 'animated badge', isNew: true},
 ]
 
 export default function TemplatePage() {
@@ -100,6 +102,8 @@ export default function TemplatePage() {
             return <FeatureCardComponent />
       case 'hexagon hero':
             return <HexagonHeroComponent />
+      case 'animated badge':
+            return <AnimatedBadgeComponent />
 
       default:
         return <div>Component not found</div>
@@ -119,6 +123,7 @@ export default function TemplatePage() {
       case 'sign animation': return <Pencil1Icon className="mr-2 h-4 w-4" />
       case 'feature card': return <FileSignature className="mr-2 h-4 w-4" />
       case 'hexagon hero': return <HexagonIcon className="mr-2 size-4" />
+      case 'animated badge': return <BadgeIcon className="mr-2 size-4" />
       default: return <ChevronRight className="mr-2 h-4 w-4" />
     }
   }
