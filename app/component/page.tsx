@@ -17,7 +17,7 @@ import IntroductionPage from '../(docs)/introduction/page'
 import CreateNewComponentt from '../(docs)/create-new-component/page'
 // import LaunchpadComponent from '../(docs)/launchpad-component/page'
 import KeyButton from '@/components/easyui/key-button'
-import { BadgeIcon, KeyboardIcon, Pencil1Icon, QuestionMarkCircledIcon, QuestionMarkIcon, StarFilledIcon, StarIcon } from '@radix-ui/react-icons'
+import { BadgeIcon, DotFilledIcon, KeyboardIcon, Pencil1Icon, QuestionMarkCircledIcon, QuestionMarkIcon, StarFilledIcon, StarIcon } from '@radix-ui/react-icons'
 import SparkleButton from '@/components/easyui/sparkle-button'
 import KeyButtonComponent from '../(docs)/key-button-component/page'
 import SparkleButtonComponent from '../(docs)/sparkle-button-component/page'
@@ -34,6 +34,7 @@ import Features from '../features/page'
 import FeatureCardComponent from '../(docs)/feature-card-component/page'
 import HexagonHeroComponent from '../(docs)/hexagon-hero-component/page'
 import AnimatedBadgeComponent from '../(docs)/animated-badge-component/page'
+import PixelCardComponent from '../(docs)/pixel-card-component/page'
 
 interface Item {
   name: string;
@@ -55,6 +56,7 @@ const components: Item[] = [
   { name: 'feature card', isNew: true},
   { name: 'hexagon hero', isNew: true},
   { name: 'animated badge', isNew: true},
+  { name: 'pixel cards', isNew: true},
 ]
 
 export default function TemplatePage() {
@@ -104,6 +106,8 @@ export default function TemplatePage() {
             return <HexagonHeroComponent />
       case 'animated badge':
             return <AnimatedBadgeComponent />
+      case 'pixel cards':
+            return <PixelCardComponent />
 
       default:
         return <div>Component not found</div>
@@ -124,6 +128,7 @@ export default function TemplatePage() {
       case 'feature card': return <FileSignature className="mr-2 h-4 w-4" />
       case 'hexagon hero': return <HexagonIcon className="mr-2 size-4" />
       case 'animated badge': return <BadgeIcon className="mr-2 size-4" />
+      case 'pixel cards': return <DotFilledIcon className="mr-2 size-4" />
       default: return <ChevronRight className="mr-2 h-4 w-4" />
     }
   }
