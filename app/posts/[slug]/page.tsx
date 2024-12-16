@@ -157,17 +157,17 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
                   //   </a>
                   // </div>
                   <a
-                    className="mt-12 bg-white dark:bg-black"
+                    className="mt-12 bg-white dark:bg-black rounded-[1rem]"
                     href={`/posts/${nextPost._raw.flattenedPath}`}
                   >
-                    <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-4 bg-white dark:bg-black py-2 mt-5">
+                    <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-4 bg-white dark:bg-black py-2 mt-5 rounded-[1rem]">
                       Next Article
                     </h2>
-                    <div className="relative  cursor-pointer group p-4 bg-white dark:bg-black border-none rounded-lg  transition-shadow duration-300">
-                      <div className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 animate-gradient-x" />
-                      <div className="absolute inset-[2px] rounded-lg bg-white  dark:bg-black z-10 border" />
-                      <div className="relative z-20 flex items-center justify-between h-full px-4 rounded-lg transition-all duration-300 ">
-                        <span className="font-semibold text-gray-800 dark:text-gray-200 transition-colors duration-300">
+                    <div className="relative  cursor-pointer group p-4 bg-white dark:bg-black border-none rounded-[0.75rem]  transition-shadow duration-300">
+                      <div className="absolute inset-0 rounded-[1rem] opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 animate-gradient-x" />
+                      <div className="absolute inset-[2px] rounded-[1rem] bg-white  dark:bg-black z-10 border" />
+                      <div className="relative z-20 flex items-center justify-between h-full px-4 rounded-[1rem] transition-all duration-300 ">
+                        <span className="font-semibold text-gray-800 dark:text-gray-200 transition-colors duration-300 rounded-[1rem] ">
                           {nextPost.title}
                         </span>
                         <ChevronRight className="text-gray-600 dark:text-gray-400 transition-all duration-300 group-hover:translate-x-1 group-hover:text-purple-600 dark:group-hover:text-purple-400" />
@@ -179,7 +179,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
               </div>
             </article>
           </main>
-          <aside className="w-full md:w-1/4 mt-8 md:mt-0 md:pl-8">
+          <aside className="w-full md:w-[300px] mt-8 md:mt-0 md:pl-8">
             <div className="space-y-8 sticky top-8 ">
               <Card className="bg-gradient-to-br from-purple-600 to-indigo-600 text-white shadow-lg overflow-hidden rounded-[0.75rem]">
                 <CardContent className="p-6 flex flex-col items-center text-center">
