@@ -314,7 +314,7 @@
 //   { name: 'EZ Red', image: '/ez-red.png', path: '/ez-red', description: 'Design with a vibrant red theme', category: 'Design', difficulty: 'Intermediate' },
 //   { name: 'EZ Shots', image: '/ez-shots.png', path: '/ez-shots', description: 'Create stunning image galleries', category: 'Gallery', difficulty: 'Intermediate' },
 //   { name: 'EZ Story', image: '/ez-story.png', path: '/ez-story', description: 'Tell your story with style', isNew: true, category: 'Blog', difficulty: 'Beginner' },
-//   { name: 'EZ Dashboard', image: '/ez-dashboard.png', path: '/ez-dashboard', description: 'Build powerful dashboards', category: 'UI', difficulty: 'Intermediate' },  
+//   { name: 'EZ Dashboard', image: '/ez-dashboard.png', path: '/ez-dashboard', description: 'Build powerful dashboards', category: 'UI', difficulty: 'Intermediate' },
 //   { name: 'EZ Docs', image: '/ez-docs.png', path: '/ez-docs', description: 'Craft comprehensive documentation', category: 'Documentation', difficulty: 'Advanced' },
 //   { name: 'EZ Grids', image: '/ez-grids.png', path: '/ez-grids', description: 'Design with flexible grid layouts', isNew: true, category: 'UI', difficulty: 'Beginner' },
 //   { name: 'EZ Landing Docs', image: '/ez-landing-docs.png', path: '/ez-landing-docs', description: 'Create engaging landing pages', isNew: true, category: 'Landing Page', difficulty: 'Intermediate' },
@@ -328,7 +328,7 @@
 //   { name: 'EZ Chatbot', image: '/ez-chatbot.png', path: '/ez-chatbot', description: 'Implement a chatbot for your website', category: 'AI', difficulty: 'Beginner' },
 //   { name: 'EZ AI', image: '/ez-ai.png', path: '/ez-ai', description: 'Implement AI features easily', isNew: true, category: 'AI', difficulty: 'Intermediate' },
 
- 
+
 // ]
 
 // export default function Component() {
@@ -357,7 +357,7 @@
 //   }, [])
 
 //   useEffect(() => {
-//     const filtered = templates.filter(template => 
+//     const filtered = templates.filter(template =>
 //       template.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
 //       (selectedCategories.length === 0 || selectedCategories.includes(template.category)) &&
 //       (selectedDifficulty.length === 0 || selectedDifficulty.includes(template.difficulty)) &&
@@ -367,7 +367,7 @@
 //   }, [searchTerm, selectedCategories, selectedDifficulty, showNewOnly])
 
 //   const handleCategoryChange = (category: string) => {
-//     setSelectedCategories(prev => 
+//     setSelectedCategories(prev =>
 //       prev.includes(category)
 //         ? prev.filter(c => c !== category)
 //         : [...prev, category]
@@ -375,14 +375,14 @@
 //   }
 
 //   const handleDifficultyChange = (difficulty: string) => {
-//     setSelectedDifficulty(prev => 
+//     setSelectedDifficulty(prev =>
 //       prev.includes(difficulty)
 //         ? prev.filter(d => d !== difficulty)
 //         : [...prev, difficulty]
 //     )
 //   }
 
- 
+
 //   const handleSearchClick = () => {
 //     setShouldAutoFocus(true)
 //      // @ts-ignore
@@ -406,9 +406,9 @@
 //           />
 //         </div> */}
 //          <div className="relative mt-10 lg:mt-0 md:mt-0">
-//           <Search 
-//             className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" 
-           
+//           <Search
+//             className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground"
+
 //           />
 //           <Input
 //             ref={searchInputRef}
@@ -516,7 +516,7 @@
 //                             <Tooltip>
 //                               <TooltipTrigger asChild>
 //                                 <Badge variant={template.difficulty === 'Beginner' ? 'default' : template.difficulty === 'Intermediate' ? 'secondary' : 'destructive'}>
-                                  
+
 //                                   {template.difficulty}
 //                                 </Badge>
 //                               </TooltipTrigger>
@@ -597,7 +597,7 @@ const templates: Template[] = [
   { name: 'EZ Red', image: '/ez-red.png', path: '/ez-red', description: 'Design with a vibrant red theme', category: 'Design', difficulty: 'Intermediate', isFree: true },
   { name: 'EZ Shots', image: '/ez-shots.png', path: '/ez-shots', description: 'Create stunning image galleries', category: 'Gallery', difficulty: 'Intermediate', isFree: true },
   { name: 'EZ Story', image: '/ez-story.png', path: '/ez-story', description: 'Tell your story with style', isNew: true, category: 'Blog', difficulty: 'Beginner' },
-  { name: 'EZ Dashboard', image: '/ez-dashboard.png', path: '/ez-dashboard', description: 'Build powerful dashboards', category: 'UI', difficulty: 'Intermediate', isFree: true },  
+  { name: 'EZ Dashboard', image: '/ez-dashboard.png', path: '/ez-dashboard', description: 'Build powerful dashboards', category: 'UI', difficulty: 'Intermediate', isFree: true },
   { name: 'EZ Docs', image: '/ez-docs.png', path: '/ez-docs', description: 'Craft comprehensive documentation', category: 'Documentation', difficulty: 'Advanced', isFree: true },
   { name: 'EZ Grids', image: '/ez-grids.png', path: '/ez-grids', description: 'Design with flexible grid layouts', isNew: true, category: 'UI', difficulty: 'Beginner' },
   { name: 'EZ Landing Docs', image: '/ez-landing-docs.png', path: '/ez-landing-docs', description: 'Create engaging landing pages', isNew: true, category: 'Landing Page', difficulty: 'Intermediate' },
@@ -610,6 +610,7 @@ const templates: Template[] = [
   { name: 'EZ Blog', image: '/ez-blog.png', path: '/ez-blog', description: 'Create a stunning blog with ease', isNew: true, category: 'Blog', difficulty: 'Advanced' },
   { name: 'EZ Chatbot', image: '/ez-chatbot.png', path: '/ez-chatbot', description: 'Implement a chatbot for your website', category: 'AI', difficulty: 'Beginner', isFree: true },
   { name: 'EZ AI', image: '/ez-ai.png', path: '/ez-ai', description: 'Implement AI features easily', isNew: true, category: 'AI', difficulty: 'Intermediate' },
+  { name: 'EZ Portfolio II', image: '/ez-portfolio-2.png', path: '/ez-portfolio-2', description: 'Stand out and showcase your magic', isNew: true, category: 'Portfolio', difficulty: 'Beginner' },
 ]
 
 export default function Component() {
@@ -639,7 +640,7 @@ export default function Component() {
   }, [])
 
   useEffect(() => {
-    const filtered = templates.filter(template => 
+    const filtered = templates.filter(template =>
       template.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
       (selectedCategories.length === 0 || selectedCategories.includes(template.category)) &&
       (selectedDifficulty.length === 0 || selectedDifficulty.includes(template.difficulty)) &&
@@ -650,7 +651,7 @@ export default function Component() {
   }, [searchTerm, selectedCategories, selectedDifficulty, showNewOnly, showFreeOnly])
 
   const handleCategoryChange = (category: string) => {
-    setSelectedCategories(prev => 
+    setSelectedCategories(prev =>
       prev.includes(category)
         ? prev.filter(c => c !== category)
         : [...prev, category]
@@ -658,7 +659,7 @@ export default function Component() {
   }
 
   const handleDifficultyChange = (difficulty: string) => {
-    setSelectedDifficulty(prev => 
+    setSelectedDifficulty(prev =>
       prev.includes(difficulty)
         ? prev.filter(d => d !== difficulty)
         : [...prev, difficulty]
@@ -675,8 +676,8 @@ export default function Component() {
     <div className="space-y-6">
       <div className="space-y-2 ">
         <div className="relative mt-10 lg:mt-0 md:mt-0">
-          <Search 
-            className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" 
+          <Search
+            className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground"
           />
           <Input
             ref={searchInputRef}
@@ -686,7 +687,7 @@ export default function Component() {
             onChange={(e) => setSearchTerm(e.target.value)}
             className="pl-8"
             autoFocus={shouldAutoFocus}
-            onClick={handleSearchClick}            
+            onClick={handleSearchClick}
           />
         </div>
       </div>
@@ -728,7 +729,7 @@ export default function Component() {
           </label>
         ))}
       </div>
-      
+
     </div>
   )
 
@@ -762,7 +763,7 @@ export default function Component() {
           <div className="flex flex-col lg:flex-row gap-8">
             <aside className="w-full lg:w-64 hidden lg:block">
               <Sidebar />
-            
+
             </aside>
             <main className="flex-1">
               <div className={viewMode === 'grid' ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" : "space-y-6"}>
