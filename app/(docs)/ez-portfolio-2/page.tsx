@@ -28,7 +28,7 @@ const EzPortfolioII = () => {
     <div className="flex flex-col p-1 sm:w-1/2 lg:min-w-[900px]">
         <div className="flex justify-between">
         <Button
-            className="group mr-2 w-1/2 px-0 py-4"
+            className="group mr-2 w-1/2 rounded-xl px-0 py-4"
             asChild
           >
             <Link href="https://github.com/adel-gu/my-website/archive/refs/heads/main.zip" target="_blank">
@@ -36,7 +36,7 @@ const EzPortfolioII = () => {
             </Link>
           </Button>
           <Button
-            className="ml-2 w-1/2 border px-0 py-4 shadow-sm hover:bg-accent hover:text-accent-foreground"
+            className="ml-2 w-1/2 rounded-xl border px-0 py-4 shadow-sm hover:bg-accent hover:text-accent-foreground"
             variant="outline"
             asChild
           >

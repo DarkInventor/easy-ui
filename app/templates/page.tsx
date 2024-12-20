@@ -610,7 +610,7 @@ const templates: Template[] = [
   { name: 'EZ Blog', image: '/ez-blog.png', path: '/ez-blog', description: 'Create a stunning blog with ease', isNew: true, category: 'Blog', difficulty: 'Advanced' },
   { name: 'EZ Chatbot', image: '/ez-chatbot.png', path: '/ez-chatbot', description: 'Implement a chatbot for your website', category: 'AI', difficulty: 'Beginner', isFree: true },
   { name: 'EZ AI', image: '/ez-ai.png', path: '/ez-ai', description: 'Implement AI features easily', isNew: true, category: 'AI', difficulty: 'Intermediate' },
-  { name: 'EZ Portfolio II', image: '/ez-portfolio-2.png', path: '/ez-portfolio-2', description: 'Stand out and showcase your magic', isNew: true, category: 'Portfolio', difficulty: 'Beginner' },
+  { name: 'EZ Portfolio II', image: '/ez-portfolio-2.png', path: '/ez-portfolio-2', description: 'Stand out and showcase your magic', isNew: true, category: 'Portfolio', difficulty: 'Beginner', isFree: true },
 ]
 
 export default function Component() {

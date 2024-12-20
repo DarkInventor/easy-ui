@@ -35,7 +35,7 @@ function EzDocss() {
     <div className="sm:w-1/2 p-1 flex-col flex lg:min-w-[900px]">
         <div className="flex justify-between">
         <Button
-            className="w-1/2 px-0 py-4 mr-2 group"
+            className="w-1/2 px-0 py-4 mr-2 group rounded-[0.75rem]"
             type="submit"
             onClick={() => {
               const link = document.createElement("a")
