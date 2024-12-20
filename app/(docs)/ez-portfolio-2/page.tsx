@@ -20,7 +20,7 @@ const EzPortfolioII = () => {
        <div className="p-1 sm:w-1/2 lg:min-w-[900px] lg:p-2 ">
         <video muted loop className="h-auto w-full rounded-lg border shadow-2xl lg:rounded-xl lg:border-none" autoPlay>
           <source
-            src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/easy-portfolio.mp4"
+            src="https://pub-0cd6f9d4131f4f79ac40219248ae64db.r2.dev/ez-portfolio-2.mp4"
             type="video/mp4"
           />
         </video>
