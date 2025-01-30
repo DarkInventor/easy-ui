@@ -1,0 +1,21 @@
+{
+  "name": "glitch-text",
+  "type": "registry:component",
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "components/ui/glitch-text.tsx",
+      "content": "\"use client\"\n\nimport React, { useEffect, useState } from \"react\"\n\ninterface GlitchTextProps {\n  text: string\n  textSize: string\n  className?: string\n  fontWeight?: React.CSSProperties[\"fontWeight\"]\n}\n\nexport default function GlitchText({\n  text,\n  textSize,\n  className = \"\",\n  fontWeight = \"normal\",\n}: GlitchTextProps) {\n  const [displayedText, setDisplayedText] = useState(\"\")\n\n  useEffect(() => {\n    let currentIndex = 0\n    const fullText = text\n    const typingInterval = setInterval(() => {\n      if (currentIndex <= fullText.length) {\n        setDisplayedText(fullText.slice(0, currentIndex))\n        currentIndex++\n      } else {\n        clearInterval(typingInterval)\n      }\n    }, 100)\n    return () => clearInterval(typingInterval)\n  }, [text])\n\n  return (\n    <div\n      className={`glitch-wrapper ${className} dark:text-white text-black`}\n      style={{ fontSize: textSize, fontWeight }}\n    >\n      <div className=\"glitch\" data-text={displayedText}>\n        {displayedText}\n      </div>\n      <style jsx>{`\n        .glitch-wrapper {\n          width: 100%;\n          height: 100vh;\n          display: flex;\n          align-items: center;\n          justify-content: center;\n          text-align: center;\n          background-color: transparent;\n        }\n        .glitch {\n          position: relative;\n          letter-spacing: 3px;\n          z-index: 1;\n        }\n        .glitch:before,\n        .glitch:after {\n          display: block;\n          content: attr(data-text);\n          position: absolute;\n          top: 0;\n          left: 0;\n          opacity: 0.8;\n        }\n        .glitch:before {\n          animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both\n            infinite;\n          color: #00ffff;\n          z-index: -1;\n        }\n        .glitch:after {\n          animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse\n            both infinite;\n          color: #ff00ff;\n          z-index: -2;\n        }\n        @keyframes glitch-it {\n          0% {\n            transform: translate(0);\n          }\n          20% {\n            transform: translate(-2px, 2px);\n          }\n          40% {\n            transform: translate(-2px, -2px);\n          }\n          60% {\n            transform: translate(2px, 2px);\n          }\n          80% {\n            transform: translate(2px, -2px);\n          }\n          to {\n            transform: translate(0);\n          }\n        }\n      `}</style>\n    </div>\n  )\n}\n",
+      "type": "registry:component",
+      "target": "components/ui/glitch-text.tsx"
+    },
+    {
+      "path": "page.tsx",
+      "content": "import GlitchText from '@/components/ui/glitch-text';\nimport React from 'react'\n\nfunction Home() {\n  return (\n    <GlitchText text='Easy UI is Awesome' textSize='100px' fontWeight=\"500\" />\n  )\n}\n\nexport default Home\n",
+      "type": "registry:component",
+      "target": "page.tsx"
+    }
+  ],
+  "author": "Kathan Mehta<ktmehta25@gmail.com>",
+  "title": "Glitch Text"
+}

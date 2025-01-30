@@ -1,0 +1,23 @@
+{
+  "name": "animated-badge",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [],
+  "files": [
+    {
+      "path": "components/ui/animated-badge.tsx",
+      "content": "\"use client\";\n\nimport React from 'react'\nimport { cn } from '@/lib/utils'\n\ninterface AnimatedBadgeProps extends React.HTMLAttributes<HTMLDivElement> {\n  text: string\n  bgColor?: string\n  textColor?: string\n  gradientColor?: string\n  animationDuration?: string\n  size?: 'sm' | 'md' | 'lg'\n}\n\nexport default function AnimatedBadge({\n  text,\n  bgColor = 'bg-green-900',\n  textColor = 'text-green-300',\n  gradientColor = 'from-transparent via-emerald-600 to-transparent',\n  animationDuration = '4s',\n  size = 'md',\n  className,\n  ...props\n}: AnimatedBadgeProps) {\n  const sizeClasses = {\n    sm: 'text-xs',\n    md: 'text-sm',\n    lg: 'text-base',\n  }\n\n  return (\n    <div\n      className={cn(\n        \"relative inline-block overflow-hidden rounded-full p-[0.125em]\",\n        bgColor,\n        className\n      )}\n      {...props}\n    >\n      <div\n        className={cn(\n          \"absolute inset-0 bg-gradient-to-t\",\n          gradientColor\n        )}\n        style={{\n          animation: `spin ${animationDuration} linear infinite`,\n        }}\n      />\n      <div\n        className={cn(\n          \"relative cursor-pointer rounded-full px-[0.75em] py-[0.0625em] font-medium\",\n          sizeClasses[size],\n          textColor,\n          bgColor\n        )}\n      >\n        {text}\n      </div>\n    </div>\n  )\n}\n\n",
+      "type": "registry:component",
+      "target": "components/ui/animated-badge.tsx"
+    },
+    {
+      "path": "page.tsx",
+      "content": "import AnimatedBadge from '@/components/ui/animated-badge';\nimport React from 'react'\n\nfunction Home() {\n  return (\n     <div className=\"p-5\">\n        <AnimatedBadge text=\"Default Badge\" className='mr-2'/>\n        <AnimatedBadge \n            text=\"Custom Colors\" \n            bgColor=\"bg-blue-900\"\n            textColor=\"text-blue-300\"\n            gradientColor=\"from-transparent via-blue-600 to-transparent\"\n            className='mr-2'/>\n        \n        <AnimatedBadge \n            text=\"Slow Animation\" \n            animationDuration=\"8s\"\n            bgColor=\"bg-purple-900\"\n            textColor=\"text-purple-300\"\n            gradientColor=\"from-transparent via-purple-600 to-transparent\"\n            className='mr-2' />\n        \n        <AnimatedBadge \n            text=\"Large Badge\" \n            size=\"lg\"\n            bgColor=\"bg-red-900\"\n            textColor=\"text-red-300\"\n            gradientColor=\"from-transparent via-red-600 to-transparent\"\n            className='mr-2' />\n        \n        <AnimatedBadge \n            text=\"Custom Tailwind\" \n            className=\"font-extrabold text-2xl\"\n            bgColor=\"bg-yellow-900\"\n            textColor=\"text-yellow-300\"\n            gradientColor=\"from-transparent via-yellow-600 to-transparent\" />\n    \n    </div>\n  )\n}\n\nexport default Home",
+      "type": "registry:component",
+      "target": "page.tsx"
+    }
+  ],
+  "author": "Kathan Mehta<ktmehta25@gmail.com>",
+  "title": "Animated Badge"
+}
+
