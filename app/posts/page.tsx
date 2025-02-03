@@ -3,6 +3,10 @@ import { allPosts } from 'contentlayer/generated'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { CalendarIcon } from 'lucide-react'
+import Image from 'next/image'
+import { Badge } from '@/components/ui/badge'
+import { ClockIcon } from '@radix-ui/react-icons'
+import { BackButton } from '@/components/back-button'
 
 export const metadata = {
   title: 'Easy UI | Beautiful Website Templates',
@@ -86,37 +90,88 @@ export default function BlogLandingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main className="container mx-auto px-4 py-8" role="main">
+   
         <header className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Easy UI Blog</h1>
           <p className="text-xl text-muted-foreground">
             Explore the latest insights, trends, and tutorials in UI design and web development.
           </p>
         </header>
-        <section className="grid gap-6 md:grid-cols-2 lg:grid-cols-3" aria-label="Blog Posts">
-          {sortedPosts.map((post) => (
-            <Card key={post._id} className="flex flex-col rounded-[1rem]" role="article" aria-label={post.title}>
-              <CardHeader>
-                <CardTitle>{post.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">{post.description}</p>
-                <div className="flex items-center text-sm text-muted-foreground">
-                  <CalendarIcon className="mr-2 h-4 w-4" />
-                  {new Date(post.date).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric',
-                  })}
-                </div>
-              </CardContent>
-              <CardFooter className="mt-auto">
-                <Button asChild className="rounded-[1rem]">
-                  <Link href={`/posts/${post._raw.flattenedPath}`}>Read More</Link>
-                </Button>
-              </CardFooter>
-            </Card>
-          ))}
-        </section>
+      <section 
+  className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:gap-10"
+  aria-label="Blog Posts Collection"
+>
+  {sortedPosts.map((post) => (
+    <Link
+      key={post._id}
+      href={`/posts/${post._raw.flattenedPath}`}
+      className="group block transform rounded-2xl border-none"
+      aria-label={`Read post: ${post.title}`}
+    >
+      <Card className="h-full overflow-hidden rounded-2xl border-2 border-gray-200 dark:border-gray-800 bg-card/50 hover:border-black dark:hover:border-gray-600 hover:ring-offset-2">
+        {post.coverImage && (
+          <div className="relative aspect-[5/3] w-full overflow-hidden">
+            <Image
+              src={post.coverImage}
+              alt={post.title}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              priority={sortedPosts.indexOf(post) < 4}
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+yHgAFWAJc08sE7wAAAABJRU5ErkJggg=="
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-card/90 via-card/40 to-transparent" />
+          </div>
+        )}
+        
+        <CardHeader className="relative space-y-2.5 px-6 pt-6">
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <CalendarIcon className="h-4 w-4 flex-shrink-0" />
+            <time dateTime={new Date(post.date).toISOString()}>
+              {new Date(post.date).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              })}
+            </time>
+          </div>
+          <CardTitle className="text-balance text-xl font-semibold leading-tight tracking-tight">
+            {post.title}
+          </CardTitle>
+        </CardHeader>
+
+        <CardContent className="px-6 pb-6">
+          <p className="text-muted-foreground line-clamp-3 text-pretty leading-relaxed">
+            {post.description}
+          </p>
+          
+          <div className="mt-6 flex items-center justify-between">
+            <Button 
+              variant="outline" 
+              className="rounded-full border-primary/30 px-6 font-medium shadow-sm hover:bg-primary/5 hover:shadow-md"
+              asChild
+            >
+              <span>
+                Read More
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
+                  viewBox="0 0 24 24"
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </span>
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+    </Link>
+  ))}
+</section>
       </main>
     </>
   )
