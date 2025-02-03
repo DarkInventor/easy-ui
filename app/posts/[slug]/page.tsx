@@ -4,6 +4,9 @@ import { useMDXComponent } from "next-contentlayer/hooks"
 
 import { components } from "./mdx-components"
 import { CalendarIcon } from "@radix-ui/react-icons"
+import React from "react"
+import NextArticle from "./NextArticle"
+import { SiteBanner } from "@/components/site-banner"
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -107,6 +110,8 @@ export default function PostPage({ params }: { params: { slug: string } }) {
           }} 
         />
       </section>
+      <NextArticle currentSlug={params.slug} />
+      
       <footer className="mt-8 border-t pt-4">
         <p className="text-gray-600 text-sm">Posted on {new Date().getFullYear()} Easy UI</p>
       </footer>
