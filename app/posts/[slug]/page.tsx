@@ -7,6 +7,7 @@ import React from "react"
 import NextArticle from "./NextArticle"
 import BlogLeadMagnetBanner from "@/components/blog-lead-magnet-banner"
 import { BackButton } from "@/components/back-button"
+import Image from "next/image"
 
 interface PostPageProps {
   params: {
@@ -90,24 +91,35 @@ const PostPage: React.FC<PostPageProps> = ({ params }) => {
   const MDXContent = useMDXComponent(post.body.code)
 
   return (
-    <div className="relative container mx-auto px-4 py-0 lg:py-8">
-        <BackButton />
+    <div className="relative lg:flex container mx-auto px-4 py-0 lg:py-10  lg:max-w-6xl pl-10">
+        
       <div className="flex flex-col lg:flex-row gap-8">
-    
-        <article className="flex-1 px-4 py-0 lg:py-8">
-   
-        <div className="mb-4">
-           
-          </div>
-          <header className="mb-6">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white tracking-normal leading-tight">
+     
+        <article className="flex-1 px-4 py-0 lg:py-0">
+        <BackButton />
+        {post.coverImage && (
+            <div className="relative overflow-hidden rounded-xl p-3 sm:p-5 md:p-0 w-full mt-10">
+              <div className="relative aspect-video w-full">
+                <Image
+                  src={post.coverImage}
+                  alt={post.title}
+                  className="rounded-xl border border-border object-cover object-center md:object-left"
+                  fill
+                />
+              </div>
+            </div>
+        )}
+ 
+        
+          <header className="mb-2 mt-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white tracking-normal leading-tight items-center text-center">
               {post.title}
             </h1>
-            <div className="flex items-center space-x-2 py-5">
+            <div className="flex items-center space-x-2 py-5 items-center text-center justify-center mx-auto">
               <span className="flex items-center justify-center w-6 h-6 bg-gray-200 rounded-full">
                 <CalendarIcon className="w-4 h-4 text-gray-900 " />
               </span>
-              <time dateTime={post.date} className="text-sm font-medium text-gray-600 dark:text-gray-300">
+              <time dateTime={post.date} className="text-sm font-medium text-gray-600 dark:text-gray-300 ">
                 Published on{" "}
                 {new Date(post.date).toLocaleDateString("en-US", {
                   year: "numeric",
@@ -117,11 +129,11 @@ const PostPage: React.FC<PostPageProps> = ({ params }) => {
               </time>
             </div>
           </header>
-          <section className="prose dark:prose-invert max-w-none">
+          <section className="prose dark:prose-invert max-w-none mx-auto text-left justify-center align-center">
             <MDXContent 
               components={{
                 ...components,
-                img: (props) => <img className="rounded-lg shadow-md" {...props} />,
+                img: (props) => <img className="rounded-lg shadow-md inline" {...props} />,
               }} 
             />
           </section>
@@ -133,8 +145,8 @@ const PostPage: React.FC<PostPageProps> = ({ params }) => {
           <NextArticle currentSlug={post._raw.flattenedPath} />
         </article>
    
-        <aside className="w-full lg:w-64 py-10">
-          <div className="lg:sticky lg:top-4">
+        <aside className="w-full lg:w-80 ml-10 py-12">
+          <div className="sticky lg:top-10 py-7">
             <BlogLeadMagnetBanner />
           </div>
         </aside>

@@ -15,10 +15,10 @@ export default function BlogLeadMagnetBanner() {
     >
       <Card className="overflow-hidden backdrop-blur-xl rounded-[0.75rem] mr-4 bg-gradient-to-br from-violet-600/90 to-indigo-600/90 border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
         <CardContent className="p-6 space-y-5">
-          <div className="flex items-center gap-2 mb-3">
+          {/* <div className="flex items-center gap-2 mb-3">
             <Sparkles className="w-5 h-5 text-yellow-300" />
             <span className="text-xs font-medium text-white/90 uppercase tracking-wider">Premium Templates</span>
-          </div>
+          </div> */}
 
           <div className="space-y-3">
             <h3 className="text-white text-center text-lg font-semibold tracking-tighter">
