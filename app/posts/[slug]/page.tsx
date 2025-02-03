@@ -145,7 +145,7 @@ const PostPage: React.FC<PostPageProps> = ({ params }) => {
           <NextArticle currentSlug={post._raw.flattenedPath} />
         </article>
    
-        <aside className="w-full lg:w-80 ml-10 py-12">
+        <aside className="w-full lg:w-80 ml-0 lg:ml-10 py-12">
           <div className="sticky lg:top-10 py-7">
             <BlogLeadMagnetBanner />
           </div>
