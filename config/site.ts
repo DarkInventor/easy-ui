@@ -6,20 +6,20 @@ export const siteConfig = {
     "Beautifully designed website templates built with React and Tailwind CSS.",
   mainNav: [
     {
-      title: "Features",
-      href: "/",
+      title: "Components",
+      href: "/component",
     },
     {
       title: "Pricing",
-      href: "/",
+      href: "/easy-mvp-pricing",
     },
     {
       title: "Blog",
-      href: "/",
+      href: "/posts",
     },
     {
-      title: "Documentation",
-      href: "/",
+      title: "Templates",
+      href: "/templates",
     }
   ],
   links: {
