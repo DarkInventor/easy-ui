@@ -121,7 +121,6 @@
 //   })
 // }
 
-
 import { allPosts } from "contentlayer/generated"
 import { readdirSync, statSync } from "fs"
 import { join } from "path"
@@ -156,17 +155,22 @@ function getRoutes(dir: string): string[] {
     const stat = statSync(path)
 
     if (stat.isDirectory()) {
-      // Remove parentheses from route groups and handle nested routes
-      const routeName = item.replace(/[$$$$]/g, "") // Remove parentheses
+      // Check if this is a route group (has parentheses)
+      const isRouteGroup = item.startsWith("(") && item.endsWith(")")
+
+      // Get the clean name without parentheses
+      const routeName = item.replace(/[$$$$]/g, "")
       const nestedRoutes = getRoutes(path)
 
       if (nestedRoutes.length > 0) {
-        // Add nested routes with proper prefix
-        routes.push(...nestedRoutes.map((route) => (route ? `${routeName}/${route}` : routeName)))
+        // For route groups, don't include the group name in the path
+        routes.push(
+          ...nestedRoutes.map((route) => (isRouteGroup ? route : route ? `${routeName}/${route}` : routeName)),
+        )
       } else {
         // Add the directory itself as a route if it contains a page.tsx
         try {
-          if (statSync(join(path, "page.tsx")).isFile()) {
+          if (statSync(join(path, "page.tsx")).isFile() && !isRouteGroup) {
             routes.push(routeName)
           }
         } catch (e) {
@@ -175,13 +179,15 @@ function getRoutes(dir: string): string[] {
       }
     } else if (item === "page.tsx" && dir !== "app") {
       // For page.tsx files, add the parent directory as a route
-      const routeName =
-        dir
-          .split("/")
-          .pop()
-          ?.replace(/[$$$$]/g, "") || ""
-      if (!routes.includes(routeName)) {
-        routes.push(routeName)
+      // But skip if the parent is a route group
+      const parentDir = dir.split("/").pop() || ""
+      const isParentRouteGroup = parentDir.startsWith("(") && parentDir.endsWith(")")
+
+      if (!isParentRouteGroup) {
+        const routeName = parentDir.replace(/[$$$$]/g, "")
+        if (!routes.includes(routeName)) {
+          routes.push(routeName)
+        }
       }
     }
   }
