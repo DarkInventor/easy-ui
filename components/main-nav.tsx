@@ -127,16 +127,16 @@ export function MainNav() {
           )}
         </Link>
         <Link
-          href="/component"
+          href="/components"
           className={cn(
             "relative py-1 transition-colors hover:text-foreground/80",
-            isActive("/component")
+            isActive("/components")
               ? "text-foreground font-medium"
               : "text-foreground/60"
           )}
         >
           Components
-          {isActive("/component") && (
+          {isActive("/components") && (
             <span className="absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-blue-500/0 via-blue-500/40 to-blue-500/0" />
           )}
         </Link>

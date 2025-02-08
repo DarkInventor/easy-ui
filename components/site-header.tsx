@@ -246,7 +246,7 @@ export function SiteHeader() {
               Templates
             </Link>
             <Link
-              href="/component"
+              href="/components"
               className="text-foreground hover:text-foreground/80 text-sm"
             >
               Components
