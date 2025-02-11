@@ -326,7 +326,7 @@ export default function TemplatePage() {
             <Menu className="size-4" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="max-h-[calc(100vh-200px)] w-screen overflow-auto">
+        <DropdownMenuContent className="max-h-[400px] w-screen overflow-auto">
           {Object.entries(
             components.reduce((acc, component) => {
               const category = component.category
