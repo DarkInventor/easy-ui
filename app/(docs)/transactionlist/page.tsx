@@ -69,7 +69,7 @@ export default function TransactionList() {
 
   const handleOpenInV0 = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
-    window.open(`https://v0.dev/chat/api/open?url=https://easyui.pro/v0-preview/highlighter.json`, '_blank')
+    window.open(`https://v0.dev/chat/api/open?url=https://easyui.pro/v0-preview/transaction-list.json`, '_blank')
   }
 
   const handleCopy = (id: string, setCopied: React.Dispatch<React.SetStateAction<boolean>>) => {
