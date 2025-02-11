@@ -433,7 +433,7 @@
 
 import { useState, useEffect, useMemo } from 'react'
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { Menu, FileText, Command, TextCursorIcon, EggFriedIcon, FileSignature, HexagonIcon, LucideSpeaker, ChevronRight } from 'lucide-react'
+import { Menu, FileText, Command, TextCursorIcon, EggFriedIcon, FileSignature, HexagonIcon, LucideSpeaker, ChevronRight, Highlighter } from 'lucide-react'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Button } from "@/components/ui/button"
 import { BadgeIcon, DotFilledIcon, KeyboardIcon, Pencil1Icon, QuestionMarkCircledIcon, StarIcon } from '@radix-ui/react-icons'
@@ -455,7 +455,8 @@ const ComponentMap = {
   'hexagon hero': dynamic(() => import('../(docs)/hexagon-hero-component/page')),
   'animated badge': dynamic(() => import('../(docs)/animated-badge-component/page')),
   'pixel cards': dynamic(() => import('../(docs)/pixel-card-component/page')),
-  'animated beam': dynamic(() => import('../(docs)/animated-beam-component/page'))
+  'animated beam': dynamic(() => import('../(docs)/animated-beam-component/page')),
+  'highlighter': dynamic(() => import('../(docs)/highlighter/page'))
 }
 
 const components = [
@@ -472,7 +473,8 @@ const components = [
   { name: 'hexagon hero', isNew: true },
   { name: 'animated badge', isNew: true },
   { name: 'pixel cards', isNew: true },
-  { name: 'animated beam', isNew: true }
+  { name: 'animated beam', isNew: true },
+  {name: 'highlighter', isNew: true}
 ] as const
 
 type ComponentName = typeof components[number]['name']
@@ -491,7 +493,8 @@ const iconMap: Record<ComponentName, JSX.Element> = {
   'hexagon hero': <HexagonIcon className="mr-2 size-4" />,
   'animated badge': <BadgeIcon className="mr-2 size-4" />,
   'pixel cards': <DotFilledIcon className="mr-2 size-4" />,
-  'animated beam': <LucideSpeaker className="mr-2 size-4" />
+  'animated beam': <LucideSpeaker className="mr-2 size-4" />,
+  'highlighter': <Highlighter className='mr-2 size-4' />
 }
 
 export default function TemplatePage() {

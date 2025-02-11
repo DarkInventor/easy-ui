@@ -1,0 +1,24 @@
+{
+  "name": "highlighter",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "rough-notation"
+  ],
+  "devDependencies": [],
+  "tailwind": {},
+  "cssVars": {
+    "light": {},
+    "dark": {}
+  },
+  "files": [
+    {
+      "path": "highlighter.tsx",
+      "content": "\"use client\";\r\n\r\nimport { useEffect, useRef } from \"react\";\r\nimport { annotate } from \"rough-notation\";\r\nimport type { RoughAnnotation } from \"rough-notation/lib/model\";\r\nimport type React from \"react\";\r\n\r\ninterface HighlighterProps {\r\n  children: React.ReactNode;\r\n  action?: \"highlight\" | \"circle\";\r\n  color?: string;\r\n}\r\n\r\nexport default function Highlighter({\r\n  children,\r\n  action = \"highlight\",\r\n  color = \"#ffd1dc\", // Default pink color\r\n}: HighlighterProps) {\r\n  const elementRef = useRef<HTMLSpanElement>(null);\r\n  const annotationRef = useRef<RoughAnnotation | null>(null);\r\n\r\n  useEffect(() => {\r\n    if (elementRef.current) {\r\n      const annotation = annotate(elementRef.current, {\r\n        type: action === \"circle\" ? \"circle\" : \"highlight\",\r\n        color: color,\r\n        multiline: true,\r\n        padding: action === \"circle\" ? 8 : 2,\r\n        iterations: 2, // More iterations for a natural effect\r\n        animationDuration: 500,\r\n      });\r\n\r\n      annotationRef.current = annotation;\r\n      annotation.show();\r\n    }\r\n\r\n    return () => {\r\n      annotationRef.current?.remove();\r\n    };\r\n  }, [action, color, elementRef.current]); // Added elementRef.current dependency\r\n\r\n  return (\r\n    <span ref={elementRef} className=\"inline-block relative bg-transparent\">\r\n      {children}\r\n    </span>\r\n  );\r\n}\r\n",
+      "type": "registry:ui"
+    }
+  ],
+  "install": {
+    "before": []
+  }
+}
