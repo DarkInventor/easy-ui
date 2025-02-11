@@ -96,7 +96,9 @@ export default function FireFlyButtonComponent() {
             >
               <RotateCcw size={16} />
             </Button>
-            <p className="w-[50%]">I‘m currently looking for <Highlighter color="#FF9800">opportunities</Highlighter> to apply my knowledge and grow as a developer. Interested in working together? <Highlighter color="#FFC107" action="circle">Let‘s connect!</Highlighter></p>
+            <p className="w-[70%] lg:w-[50%] leading-7">
+      This is <Highlighter color="#FF9800">Easy UI Highlighter</Highlighter> component, designed to make important text stand out effortlessly. Customize colors, actions, and styles to fit your needs. <Highlighter color="#FFC107" action="circle">Try it out now!</Highlighter>
+    </p>
           </div>
         </TabsContent>
         <TabsContent value="code">      
@@ -125,9 +127,8 @@ import React from 'react'
 
 function MyComponent() {
   return (
-    <p className="w-[50%]">
-      I‘m currently looking for <Highlighter color="#FF9800">opportunities</Highlighter> to apply my knowledge and grow as a 
-      developer.Interested in working together? <Highlighter color="#FFC107" action="circle">Let‘s connect!</Highlighter>
+    <p className="w-[80%] lg:w-[50%]">
+      This is the <Highlighter color="#FF9800">Easy UI Highlighter</Highlighter> component, designed to make important text stand out effortlessly. Customize colors, actions, and styles to fit your needs. <Highlighter color="#FFC107" action="circle">Try it out now!</Highlighter>
     </p>
   )
 }
