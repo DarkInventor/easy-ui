@@ -84,7 +84,7 @@ export default function TransactionList() {
   }
 
   return (
-    <div className="flex flex-wrap justify-start gap-4 pb-10 max-w-full min-w-full px-0 lg:px-20">
+    <div className="flex flex-wrap justify-start gap-4 pb-10 max-w-full min-w-full px-0 lg:px-20 overflow-hidden">
       <div className="w-full sm:w-1/2 p-2 mt-3 space-y-4 lg:mt-5 md:lg-5">
         <CardTitle className="text-3xl tracking-tight leading-7">
           Highlighter
