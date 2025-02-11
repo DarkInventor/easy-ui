@@ -261,10 +261,10 @@ export default function Highlighter({
 </TabsContent>
 </Tabs>
       
-      <div className="py-10 ml-3">
-        <h2 className="font-heading mt-12 scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight first:mt-0">Credits</h2>
+      <div className="py-10 ml-0">
+      <p className="mt-5 text-xl font-semibold leading-7 tracking-tight lg:text-2xl mb-12">Credits</p>
         <p className="leading-7 [&:not(:first-child)]:mt-6 tracking-tight">Credit to <a href="https://github.com/Pratiyankkumar" className="font-bold italic underline">@pratiyank</a> for this component.</p>
+        </div>
       </div>
-    </div>
   )
 }
