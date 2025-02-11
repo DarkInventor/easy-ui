@@ -1,0 +1,23 @@
+{
+  "name": "feature-card",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [],
+  "files": [
+    {
+      "path": "components/ui/feature-card.tsx",
+      "content": "export default function FeatureCard() {\n    return (\n      <div className=\"mx-auto flex h-[399px] w-full max-w-[343px] flex-col overflow-hidden rounded-3xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-black shadow-md sm:h-[310px] sm:max-w-[510px]\">\n        <div className=\"flex grow flex-col p-4 sm:p-6\">\n          <div className=\"mb-4 grid grow grid-cols-1 gap-4 sm:mb-4 sm:grid-cols-3 sm:gap-6\">\n            {/* Card 1 */}\n            <div className=\"group relative cursor-pointer overflow-hidden rounded-2xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-black transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-transparent sm:-rotate-2\">\n              <div className=\"absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-70\"></div>\n              <div className=\"relative z-10 flex h-full flex-col justify-between rounded-2xl bg-white  dark:bg-black p-3 transition-colors duration-300 group-hover:bg-opacity-90 sm:p-4\">\n                <div className=\"size-10 rounded-full bg-gradient-to-r from-green-300 to-yellow-300 sm:size-14\" />\n                <div className=\"space-y-1.5 sm:space-y-2\">\n                  <div className=\"h-1.5 w-20 rounded-full bg-gray-300 sm:h-2 sm:w-24\" />\n                  <div className=\"h-1.5 w-24 rounded-full bg-gray-100 sm:h-2 sm:w-28\" />\n                </div>\n              </div>\n            </div>\n  \n            {/* Card 2 */}\n            <div className=\"group relative cursor-pointer overflow-hidden rounded-2xl border border-gray-100 bg-white dark:bg-black dark:border-gray-700 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-transparent\">\n              <div className=\"absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-blue-400 via-teal-500 to-green-500 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-70\"></div>\n              <div className=\"relative z-10 flex h-full flex-col justify-between rounded-2xl bg-white dark:bg-black p-3 transition-colors duration-300 group-hover:bg-opacity-90 sm:p-4\">\n                <div className=\"size-10 rounded-full bg-gradient-to-r from-green-300 to-orange-300 sm:size-14\" />\n                <div className=\"space-y-1.5 sm:space-y-2\">\n                  <div className=\"h-1.5 w-20 rounded-full bg-gray-300 sm:h-2 sm:w-24\" />\n                  <div className=\"h-1.5 w-24 rounded-full bg-gray-100 sm:h-2 sm:w-28\" />\n                </div>\n              </div>\n            </div>\n  \n            {/* Card 3 */}\n            <div className=\"group relative cursor-pointer overflow-hidden rounded-2xl border border-gray-100 bg-white dark:bg-black dark:border-gray-700 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-transparent sm:rotate-2\">\n              <div className=\"absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-70\"></div>\n              <div className=\"relative z-10 flex h-full flex-col justify-between rounded-2xl bg-white dark:bg-black p-3 transition-colors duration-300 group-hover:bg-opacity-90 sm:p-4\">\n                <div className=\"size-10 rounded-full bg-gradient-to-r from-pink-300 to-yellow-300 sm:size-14\" />\n                <div className=\"space-y-1.5 sm:space-y-2\">\n                  <div className=\"h-1.5 w-20 rounded-full bg-gray-300 sm:h-2 sm:w-24\" />\n                  <div className=\"h-1.5 w-24 rounded-full bg-gray-100 sm:h-2 sm:w-28\" />\n                </div>\n              </div>\n            </div>\n          </div>\n  \n          <div className=\"border-t border-gray-200 dark:border-gray-700\">\n            <h2 className=\" text-lg font-bold sm:mt-2 sm:text-xl \">Social</h2>\n            <p className=\"text-xs text-gray-500 sm:text-sm\">Write once, share with your friends</p>\n          </div>\n        </div>\n      </div>\n    )\n  }",
+      "type": "registry:component",
+      "target": "components/ui/feature-card.tsx"
+    },
+    {
+      "path": "page.tsx",
+      "content": "import FeatureCard from '@/components/ui/feature-card';\nimport React from 'react'\n\nfunction Home() {\n\n  return (\n    <FeatureCard />\n  )\n}\n\nexport default Home",
+      "type": "registry:component",
+      "target": "page.tsx"
+    }
+  ],
+  "author": "Kathan Mehta<ktmehta25@gmail.com>",
+  "title": "Feature Card"
+}
+
