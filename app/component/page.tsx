@@ -318,7 +318,7 @@ export default function TemplatePage() {
     <div className="flex h-screen flex-1 flex-col overflow-auto">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" className="w-full justify-between px-4 py-2">
+          <Button variant="outline" className="w-[95%] justify-between px-4 py-2 felx mx-auto rounded-[0.75rem]">
             <span className="flex items-center">
               {iconMap[selectedItem]}
               {selectedItem}
@@ -326,7 +326,7 @@ export default function TemplatePage() {
             <Menu className="size-4" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="max-h-[400px] w-screen overflow-auto">
+        <DropdownMenuContent className="max-h-[450px] w-screen overflow-auto">
           {Object.entries(
             components.reduce((acc, component) => {
               const category = component.category
