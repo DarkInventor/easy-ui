@@ -125,7 +125,7 @@ export default function FireFlyButtonComponent() {
 import Highlighter from "@/components/easyui/highlighter"
 import React from 'react'
 
-function MyComponent() {
+function Home() {
   return (
     <p className="w-[80%] lg:w-[50%]">
       This is the <Highlighter color="#FF9800">Easy UI Highlighter</Highlighter> component, designed to make important text stand out effortlessly. Customize colors, actions, and styles to fit your needs. <Highlighter color="#FFC107" action="circle">Try it out now!</Highlighter>
@@ -133,7 +133,7 @@ function MyComponent() {
   )
 }
 
-export default MyComponent
+export default Home
 `}
                 </code>
               </pre>
