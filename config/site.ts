@@ -15,7 +15,7 @@ export const siteConfig = {
     },
     {
       title: "Blog",
-      href: "/posts",
+      href: "/blog",
     },
     {
       title: "Templates",

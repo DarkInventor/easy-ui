@@ -28,7 +28,7 @@ export async function GET() {
     <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
       <channel>
         <title>${escapeXml(siteConfig.name)} Blog</title>
-        <link>https://www.easyui.pro/posts</link>
+        <link>https://www.easyui.pro/blog</link>
         <description>${escapeXml("Explore the latest insights, trends, and tutorials in UI design and web development.")}</description>
         <language>en</language>
         <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
