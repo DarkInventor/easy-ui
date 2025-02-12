@@ -17,7 +17,7 @@ export default function NextArticle({ currentSlug }: NextArticleProps) {
   return (
     <Link
       // Updated URL to use the flattenedPath for generating the link
-      href={`/posts/${nextPost._raw.flattenedPath}`}
+      href={`/blog/${nextPost._raw.flattenedPath}`}
       className="mt-12 block bg-white dark:bg-black "
     >
       <h2 className="mb-4 mt-5 bg-white py-2 text-xl font-bold text-gray-800 dark:bg-black dark:text-white">
