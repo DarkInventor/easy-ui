@@ -87,10 +87,10 @@ export default function TransactionList() {
     <div className="flex flex-wrap justify-start gap-4 pb-10 max-w-full min-w-full px-0 lg:px-20 overflow-hidden">
       <div className="w-full sm:w-1/2 p-2 mt-3 space-y-4 lg:mt-5 md:lg-5">
         <CardTitle className="text-3xl tracking-tight leading-7">
-          Highlighter
+          Transaction List 
         </CardTitle>
         <CardDescription className="text-balance text-lg text-muted-foreground">
-          A text highlighter that mimics the effect of a human-drawn marker stroke.
+          Reusable list card with transaction data + popup. 
         </CardDescription>
       </div>
 
