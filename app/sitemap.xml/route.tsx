@@ -96,7 +96,7 @@ export async function GET() {
   // Build XML entries for each blog post from Contentlayer
   const postsUrls = allPosts
     .map((post) => {
-      const url = `${baseUrl}/posts/${post._raw.flattenedPath}`
+      const url = `${baseUrl}/blog/${post._raw.flattenedPath}`
       const lastmod = post.date ? new Date(post.date).toISOString() : new Date().toISOString()
       return `
     <url>
