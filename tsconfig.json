@@ -44,6 +44,6 @@
   ],
   "exclude": [
     "node_modules",
-    "app/posts/[slug]/page.tsx"
+    "app/blog/[slug]/page.tsx"
   ]
 }
