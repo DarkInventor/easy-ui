@@ -284,7 +284,7 @@ export default function BlogLandingPage() {
           {sortedPosts.map((post) => (
             <Link
               key={post._id}
-              href={`/posts/${post._raw.flattenedPath}`}
+              href={`/blog/${post._raw.flattenedPath}`}
               className="group block transform rounded-2xl border-none"
               aria-label={`Read post: ${post.title}`}
             >
