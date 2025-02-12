@@ -16,7 +16,7 @@ export default function RelatedPosts({ currentPost }) {
       <ul>
         {relatedPosts.map(post => (
           <li key={post._id}>
-            <Link href={`/posts/${post._raw.flattenedPath}`}>{post.title}</Link>
+            <Link href={`/blog/${post._raw.flattenedPath}`}>{post.title}</Link>
           </li>
         ))}
       </ul>

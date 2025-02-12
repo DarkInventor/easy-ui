@@ -38,8 +38,8 @@ export async function GET() {
             return `
             <item>
               <title>${escapeXml(post.title)}</title>
-              <link>https://www.easyui.pro/posts/${post._raw.flattenedPath}</link>
-              <guid>https://www.easyui.pro/posts/${post._raw.flattenedPath}</guid>
+              <link>https://www.easyui.pro/blog/${post._raw.flattenedPath}</link>
+              <guid>https://www.easyui.pro/blog/${post._raw.flattenedPath}</guid>
               <description><![CDATA[${post.description}]]></description>
               <pubDate>${new Date(post.date).toUTCString()}</pubDate>
               ${post.coverImage ? `<enclosure url="${escapeXml(post.coverImage)}" type="image/jpeg" />` : ""}

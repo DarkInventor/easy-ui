@@ -21,7 +21,7 @@ const DisqusComments = dynamic(() => import('@/components/DisqusComments'), {
 export default function Comments({ post }) {
   return (
     <DisqusComments
-      url={`https://easyui.pro/posts/${post._raw.flattenedPath}`}
+      url={`https://easyui.pro/blog/${post._raw.flattenedPath}`}
       identifier={post._id}
       title={post.title}
     />

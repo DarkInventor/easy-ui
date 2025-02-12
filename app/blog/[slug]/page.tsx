@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PostPageProps) {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug)
   if (!post) return {}
 
-  const canonicalUrl = `https://easyui.pro/posts/${params.slug}`
+  const canonicalUrl = `https://easyui.pro/blog/${params.slug}`
 
   return {
     metadataBase: new URL("https://easyui.pro/"),

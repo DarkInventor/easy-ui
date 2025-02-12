@@ -255,7 +255,7 @@ export default function BlogLandingPage() {
         "@type": "BlogPosting",
         headline: post.title,
         description: post.description,
-        url: `https://www.easyui.pro/posts/${post._raw.flattenedPath}`,
+        url: `https://www.easyui.pro/blog/${post._raw.flattenedPath}`,
         datePublished: post.date,
       },
     })),

@@ -34,7 +34,7 @@ export const Post = defineDocumentType(() => ({
     coverImage: { type: 'string' },
   },
   computedFields: {
-    url: { type: 'string', resolve: (post) => `/posts/${post._raw.flattenedPath}` },
+    url: { type: 'string', resolve: (post) => `/blog/${post._raw.flattenedPath}` },
   },
 }))
 
