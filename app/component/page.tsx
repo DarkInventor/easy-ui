@@ -214,7 +214,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { Menu, FileText, Command, TextCursorIcon, EggFriedIcon, FileSignature, HexagonIcon, LucideSpeaker, ChevronRight, Highlighter, CreditCard } from 'lucide-react'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Button } from "@/components/ui/button"
-import { BadgeIcon, DotFilledIcon, KeyboardIcon, Pencil1Icon, QuestionMarkCircledIcon, StarIcon } from '@radix-ui/react-icons'
+import { BadgeIcon, DotFilledIcon, KeyboardIcon, Pencil1Icon, QuestionMarkCircledIcon, StarIcon, UploadIcon } from '@radix-ui/react-icons'
 
 // Dynamic imports for better performance
 import dynamic from 'next/dynamic'
@@ -236,6 +236,7 @@ const ComponentMap = {
   'animated beam': dynamic(() => import('../(docs)/animated-beam-component/page')),
   'highlighter': dynamic(() => import('../(docs)/highlighter/page')),
   'transaction list': dynamic(() => import('../(docs)/transactionlist/page')),
+  'file upload': dynamic(() => import('../(docs)/file-upload/page')),
 }
 
 const components = [
@@ -254,7 +255,8 @@ const components = [
   { name: 'pixel cards', category: 'cards', isNew: true },
   { name: 'animated beam', category: 'animations', isNew: true },
   { name: 'highlighter', category: 'typography', isNew: true },
-  { name: 'transaction list', category: 'data-display', isNew: true }
+  { name: 'transaction list', category: 'data-display', isNew: true },
+  { name: 'file upload', category: 'forms', isNew: true }
 ] as const
 
 type ComponentName = typeof components[number]['name']
@@ -276,6 +278,7 @@ const iconMap: Record<ComponentName, JSX.Element> = {
   'animated beam': <LucideSpeaker className="mr-2 size-4" />,
   'highlighter': <Highlighter className='mr-2 size-4' />,
   'transaction list': <CreditCard className='mr-2 size-4' />,
+  'file upload': <UploadIcon className='mr-2 size-4' />,
 }
 
 export default function TemplatePage() {
