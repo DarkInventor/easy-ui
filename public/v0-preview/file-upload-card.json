@@ -11,7 +11,7 @@
     },
     {
       "path": "page.tsx",
-      "content": "import FileUploadZone from \"@/components/easyui/file-upload-card\"\nimport React from 'react'\n\nfunction Home() {\n  return (\n      <FileUploadZone />\n  )\n}\n\nexport default Home",
+      "content": "import FileUploadZone from \"@/components/ui/file-upload\"\nimport React from 'react'\n\nfunction Home() {\n  return (\n      <FileUploadZone />\n  )\n}\n\nexport default Home",
       "type": "registry:component",
       "target": "page.tsx"
     }
