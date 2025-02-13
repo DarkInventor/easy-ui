@@ -27,7 +27,6 @@
   "install": {
     "before": [
       "npx shadcn@latest add card",
-      "npx shadcn@latest add cardcontent",
       "npx shadcn@latest add progress",
       "npx shadcn@latest add button"
     ]
