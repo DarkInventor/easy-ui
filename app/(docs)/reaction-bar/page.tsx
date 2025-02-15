@@ -230,7 +230,7 @@ export default Home
           </TabsTrigger>
         </TabsList>
         {/* @ts-ignore */}
-        <RainbowButton className="z-50 mr-2 h-8 cursor-pointer rounded-xl px-4 font-semibold"  onClick={handleOpenInV0}>
+        {/* <RainbowButton className="z-50 mr-2 h-8 cursor-pointer rounded-xl px-4 font-semibold"  onClick={handleOpenInV0}>
           <span className="flex items-center text-sm font-semibold leading-7 ">
             Open in 
             <svg 
@@ -244,7 +244,7 @@ export default Home
               <path d="M13.7688 19.0956L0 3.68759H5.53933L13.6231 12.7337V3.68759H17.7535V17.5746C17.7535 19.6705 15.1654 20.6584 13.7688 19.0956Z"></path>
             </svg>
           </span>
-        </RainbowButton>
+        </RainbowButton> */}
         </div>
         <TabsContent value="preview" className="relative rounded-md" key={key}>
           <div className="flex items-center justify-center max-w-full mx-auto px-4 py-0.5 border rounded-lg h-auto">
