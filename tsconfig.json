@@ -41,7 +41,7 @@
     ".next/types/**/*.ts",
     ".contentlayer/generated",
     "scripts/build.ts"
-  ],
+, "app/(docs)/confetti-poll"  ],
   "exclude": [
     "node_modules",
     "app/blog/[slug]/page.tsx"

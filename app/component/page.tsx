@@ -211,7 +211,7 @@
 
 import { useState, useEffect, useMemo } from 'react'
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { Menu, FileText, Command, TextCursorIcon, EggFriedIcon, FileSignature, HexagonIcon, LucideSpeaker, ChevronRight, Highlighter, CreditCard, SmileIcon, LucideCloudMoonRain } from 'lucide-react'
+import { Menu, FileText, Command, TextCursorIcon, EggFriedIcon, FileSignature, HexagonIcon, LucideSpeaker, ChevronRight, Highlighter, CreditCard, SmileIcon, LucideCloudMoonRain, CornerLeftUp } from 'lucide-react'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Button } from "@/components/ui/button"
 import { BadgeIcon, DotFilledIcon, KeyboardIcon, Pencil1Icon, QuestionMarkCircledIcon, StarIcon, UploadIcon } from '@radix-ui/react-icons'
@@ -239,6 +239,7 @@ const ComponentMap = {
   'file upload': dynamic(() => import('../(docs)/file-upload/page')),
   'reaction bar': dynamic(() => import('../(docs)/reaction-bar/page')),
   'colored button': dynamic(() => import('../(docs)/colored-button/page')),
+  'confetti poll': dynamic(() => import('../(docs)/confetti-poll/page')),
 }
 
 const components = [
@@ -260,7 +261,8 @@ const components = [
   { name: 'transaction list', category: 'data-display', isNew: true },
   { name: 'file upload', category: 'forms', isNew: true },
   { name: 'reaction bar', category: 'cards', isNew: true },
-  { name: 'colored button', category: 'buttons', isNew: true }
+  { name: 'colored button', category: 'buttons', isNew: true },
+  { name: 'confetti poll', category: 'cards', isNew: true }
 ] as const
 
 type ComponentName = typeof components[number]['name']
@@ -285,6 +287,7 @@ const iconMap: Record<ComponentName, JSX.Element> = {
   'file upload': <UploadIcon className='mr-2 size-4' />,
   'reaction bar': <SmileIcon className='mr-2 size-4' />,
   'colored button': <LucideCloudMoonRain className='mr-2 size-4' />,
+  'confetti poll': <CornerLeftUp className='mr-2 size-4' />,
 }
 
 export default function TemplatePage() {
