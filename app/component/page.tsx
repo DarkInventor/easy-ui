@@ -214,7 +214,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { Menu, FileText, Command, TextCursorIcon, EggFriedIcon, FileSignature, HexagonIcon, LucideSpeaker, ChevronRight, Highlighter, CreditCard, SmileIcon, LucideCloudMoonRain, CornerLeftUp } from 'lucide-react'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Button } from "@/components/ui/button"
-import { BadgeIcon, DotFilledIcon, KeyboardIcon, Pencil1Icon, QuestionMarkCircledIcon, StarIcon, UploadIcon } from '@radix-ui/react-icons'
+import { BadgeIcon, CursorArrowIcon, DotFilledIcon, KeyboardIcon, Pencil1Icon, QuestionMarkCircledIcon, StarIcon, UploadIcon } from '@radix-ui/react-icons'
 
 // Dynamic imports for better performance
 import dynamic from 'next/dynamic'
@@ -240,6 +240,7 @@ const ComponentMap = {
   'reaction bar': dynamic(() => import('../(docs)/reaction-bar/page')),
   'colored button': dynamic(() => import('../(docs)/colored-button/page')),
   'confetti poll': dynamic(() => import('../(docs)/confetti-poll/page')),
+  'tilt motion': dynamic(() => import('../(docs)/tilt-motion/page')),
 }
 
 const components = [
@@ -262,7 +263,8 @@ const components = [
   { name: 'file upload', category: 'forms', isNew: true },
   { name: 'reaction bar', category: 'cards', isNew: true },
   { name: 'colored button', category: 'buttons', isNew: true },
-  { name: 'confetti poll', category: 'cards', isNew: true }
+  { name: 'confetti poll', category: 'cards', isNew: true },
+  { name: 'tilt motion', category: 'cards', isNew: true }
 ] as const
 
 type ComponentName = typeof components[number]['name']
@@ -288,6 +290,7 @@ const iconMap: Record<ComponentName, JSX.Element> = {
   'reaction bar': <SmileIcon className='mr-2 size-4' />,
   'colored button': <LucideCloudMoonRain className='mr-2 size-4' />,
   'confetti poll': <CornerLeftUp className='mr-2 size-4' />,
+  'tilt motion': <CursorArrowIcon className='mr-2 size-4' />,
 }
 
 export default function TemplatePage() {

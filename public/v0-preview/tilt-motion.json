@@ -1,0 +1,24 @@
+{
+  "name": "tilt-motion",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "framer-motion"
+  ],
+  "files": [
+    {
+      "path": "components/ui/tilt-motion.tsx",
+      "content": "\"use client\"\n\nimport type React from \"react\"\nimport { useState, useRef, useEffect } from \"react\"\nimport { motion, useMotionValue, useSpring, useTransform } from \"framer-motion\"\n\ninterface TiltMotionProps {\n  children: React.ReactNode\n  tiltFactor?: number\n  perspective?: number\n  scale?: number\n  transitionDuration?: number\n}\n\nexport const TiltMotion: React.FC<TiltMotionProps> = ({\n  children,\n  tiltFactor = 15,\n  perspective = 1000,\n  scale = 1.05,\n  transitionDuration = 0.5,\n}) => {\n  const [isHovering, setIsHovering] = useState(false)\n  const ref = useRef<HTMLDivElement>(null)\n  const [elementSize, setElementSize] = useState({ width: 0, height: 0 })\n\n  const x = useMotionValue(0)\n  const y = useMotionValue(0)\n\n  const springConfig = { damping: 30, stiffness: 400, mass: 0.5 }\n  const xSpring = useSpring(x, springConfig)\n  const ySpring = useSpring(y, springConfig)\n\n  const rotateX = useTransform(ySpring, [-elementSize.height / 2, elementSize.height / 2], [tiltFactor, -tiltFactor])\n  const rotateY = useTransform(xSpring, [-elementSize.width / 2, elementSize.width / 2], [-tiltFactor, tiltFactor])\n\n  useEffect(() => {\n    const updateSize = () => {\n      if (ref.current) {\n        setElementSize({\n          width: ref.current.offsetWidth,\n          height: ref.current.offsetHeight,\n        })\n      }\n    }\n\n    updateSize()\n    window.addEventListener(\"resize\", updateSize)\n    return () => window.removeEventListener(\"resize\", updateSize)\n  }, [])\n\n  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {\n    if (!ref.current) return\n    const rect = ref.current.getBoundingClientRect()\n    const mouseX = event.clientX - rect.left\n    const mouseY = event.clientY - rect.top\n    const centerX = elementSize.width / 2\n    const centerY = elementSize.height / 2\n    x.set(mouseX - centerX)\n    y.set(mouseY - centerY)\n  }\n\n  const handleMouseEnter = () => setIsHovering(true)\n  const handleMouseLeave = () => {\n    setIsHovering(false)\n    x.set(0)\n    y.set(0)\n  }\n\n  return (\n    <motion.div\n      ref={ref}\n      style={{\n        perspective,\n        transformStyle: \"preserve-3d\",\n      }}\n      onMouseMove={handleMouseMove}\n      onMouseEnter={handleMouseEnter}\n      onMouseLeave={handleMouseLeave}\n    >\n      <motion.div\n        style={{\n          rotateX,\n          rotateY,\n          scale: isHovering ? scale : 1,\n          z: isHovering ? 50 : 0,\n        }}\n        transition={{\n          duration: transitionDuration,\n          type: \"spring\",\n          ...springConfig,\n        }}\n      >\n        {children}\n      </motion.div>\n    </motion.div>\n  )\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/tilt-motion.tsx"
+    },
+    {
+      "path": "page.tsx",
+      "content": "import { TiltMotion } from \"@/components/ui/tilt-motion\"\nimport React from 'react'\nimport { Card } from \"@/components/ui/card\"\n\nfunction Home() {\n  return (\n      <main className=\"flex min-h-auto flex-col items-center justify-center p-10 bg-background\">           \n        <TiltMotion tiltFactor={20} scale={1.05} perspective={1500} transitionDuration={0.3}>\n            <Card className=\"w-full max-w-md bg-white shadow-xl overflow-hidden rounded-[0.75rem] min-h-[400px] min-w-[400px]\">\n                    {/* Add your content here */}\n            </Card>\n        </TiltMotion>\n    </main>\n  )\n}\n\nexport default Home",
+      "type": "registry:component",
+      "target": "page.tsx"
+    }
+  ],
+  "author": "Kathan Mehta<ktmehta25@gmail.com>",
+  "title": "Tilt Motion"
+}
