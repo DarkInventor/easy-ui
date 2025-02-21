@@ -100,7 +100,7 @@ export default function TiltMotionComponent() {
             <main className="flex min-h-auto flex-col items-center justify-center p-10 bg-background">
            
             <TiltMotion tiltFactor={20} scale={1.05} perspective={1500} transitionDuration={0.3}>
-            <Card className="w-full max-w-md bg-white shadow-xl overflow-hidden rounded-[0.75rem] min-h-[400px] min-w-[400px]">
+            <Card className="w-full max-w-md bg-white shadow-xl overflow-hidden rounded-[0.75rem] min-h-[200px] lg:min-h-[400px] min-w-[200px] lg:min-w-[400px]">
                     {/* Add your content here */}
             </Card>
         </TiltMotion>
