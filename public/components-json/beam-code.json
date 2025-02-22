@@ -1,0 +1,24 @@
+{
+  "name": "beam-code",
+  "type": "registry:ui",
+  "registryDependencies": [],
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "tailwind": {},
+  "cssVars": {
+    "light": {},
+    "dark": {}
+  },
+  "files": [
+    {
+      "path": "beam-code.tsx",
+      "content": "import { Zap, Github, Twitter } from 'lucide-react'\nimport React from 'react'\nimport { BeamButton } from './beam-button'\nimport { BeamCard } from './beam-card'\n\nfunction BeamCode() {\n  return (\n    <div\n    className={`flex min-h-screen w-full flex-col items-center justify-center p-4 sm:p-6 md:p-8 lg:p-12 `}\n  >\n    <div className=\"w-full max-w-[80%] lg:max-w-[50%]\">\n\n\n      <div className=\"space-y-8\">\n        {/* Feature Card */}\n        <BeamCard beamColor=\"#22d3ee\" glowColor=\"rgba(34, 211, 238, 0.5)\" hoverColor=\"rgba(34, 211, 238, 0.2)\">\n          <h2 className=\"text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3 md:mb-4\">\n            Amazing Feature\n          </h2>\n          <p className=\"text-sm md:text-base text-slate-600 dark:text-slate-300 mb-4 md:mb-6\">\n            Experience the power of our cutting-edge technology with this amazing feature.\n          </p>\n          <BeamButton\n            beamProps={{\n              beamColor: \"#22d3ee\",\n              glowColor: \"rgba(34, 211, 238, 0.5)\",\n              hoverColor: \"rgba(34, 211, 238, 0.2)\",                \n            }}\n            className=\"border rounded-[0.75rem] text-sm \"\n          >\n            Learn More\n          </BeamButton>\n        </BeamCard>\n\n        {/* Pricing Card */}\n        <BeamCard beamColor=\"#a855f7\" glowColor=\"rgba(168, 85, 247, 0.5)\" hoverColor=\"rgba(168, 85, 247, 0.2)\">\n          <h2 className=\"text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3 md:mb-4\">Pro Plan</h2>\n          <p className=\"text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4 md:mb-6\">\n            $49<span className=\"text-base md:text-lg font-normal\">/month</span>\n          </p>\n          <ul className=\"text-sm md:text-base text-slate-600 dark:text-slate-300 mb-4 md:mb-6 space-y-2\">\n            <li className=\"flex items-center\">\n              <Zap className=\"mr-2 h-4 w-4 text-purple-400\" /> Advanced Features\n            </li>\n            <li className=\"flex items-center\">\n              <Zap className=\"mr-2 h-4 w-4 text-purple-400\" /> Priority Support\n            </li>\n            <li className=\"flex items-center\">\n              <Zap className=\"mr-2 h-4 w-4 text-purple-400\" /> Custom Integrations\n            </li>\n          </ul>\n          <BeamButton\n            beamProps={{\n              beamColor: \"#a855f7\",\n              glowColor: \"rgba(168, 85, 247, 0.5)\",\n              hoverColor: \"rgba(168, 85, 247, 0.2)\",\n            }}\n            className=\"border rounded-[0.75rem] text-sm\"\n          >\n            Choose Plan\n          </BeamButton>\n        </BeamCard>\n\n        {/* Contact Card */}\n        <BeamCard beamColor=\"#f43f5e\" glowColor=\"rgba(244, 63, 94, 0.5)\" hoverColor=\"rgba(244, 63, 94, 0.2)\">\n          <h2 className=\"text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3 md:mb-4\">Get in Touch</h2>\n          <p className=\"text-sm md:text-base text-slate-600 dark:text-slate-300 mb-4 md:mb-6\">\n            Have questions? Our team is here to help you get started.\n          </p>\n          <div className=\"flex space-x-4\">\n            <BeamButton\n              size=\"icon\"\n              beamProps={{\n                beamColor: \"#f43f5e\",\n                glowColor: \"rgba(244, 63, 94, 0.5)\",\n                hoverColor: \"rgba(244, 63, 94, 0.2)\",\n              }}\n              className=\"border rounded-[0.75rem] text-sm\"\n            >\n              <Github className=\"h-4 w-4 md:h-4 md:w-4\" />\n            </BeamButton>\n            <BeamButton\n              size=\"icon\"\n              beamProps={{\n                beamColor: \"#f43f5e\",\n                glowColor: \"rgba(244, 63, 94, 0.5)\",\n                hoverColor: \"rgba(244, 63, 94, 0.2)\",\n              }}\n              className=\"border rounded-[0.75rem] \"\n            >\n              <Twitter className=\"h-4 w-4 md:h-4 md:w-4\" />\n            </BeamButton>\n          </div>\n        </BeamCard>\n      </div>\n    </div>\n  </div>\n  )\n}\n\nexport default BeamCode",
+      "type": "registry:ui"
+    }
+  ],
+  "install": {
+    "before": []
+  }
+}
