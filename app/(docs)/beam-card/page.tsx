@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState } from "react"
-import { Copy, Check, RotateCcw, CheckIcon, CopyIcon, CreditCard, MapPin, Plus, Github, Twitter, Zap } from "lucide-react"
+import { Copy, Check, RotateCcw, CheckIcon, CopyIcon, CreditCard, MapPin, Plus, Github, Twitter, Zap, Clipboard } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { CardDescription, CardTitle } from "@/components/ui/card"
@@ -88,8 +88,8 @@ export default function BeamCardComponent() {
           </span>
         </RainbowButton>
         </div>
-        <TabsContent value="preview" className="relative rounded-md" key={key}>
-          <div className="flex items-center justify-center max-w-full mx-auto px-4 py-0.5 border rounded-lg h-auto">
+        <TabsContent value="preview" className="relative rounded-[0.50rem]" key={key}>
+          <div className="flex items-center justify-center max-w-full mx-auto px-4 py-0.5 border rounded-[0.50rem] shadow-sm h-auto">
             <Button
               onClick={() => setKey((prev) => prev + 1)}
               className="absolute right-0 top-0 z-10 ml-4 flex items-center rounded-lg px-3 py-1"
@@ -197,7 +197,7 @@ export default function BeamCardComponent() {
             {/* <p className="font-semibold mt-5 tracking-tight leading-7">
               Step 2: Use the FireflyButton component in your desired page or component:
             </p> */}
-            <div className="w-full rounded-md [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto relative bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+            <div className="w-full rounded-[0.50rem] [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto relative bg-gray-100 dark:bg-zinc-900 border border-gray-200 dark:border-gray-900">
               <button
                 onClick={() => handleCopy("codeBlock2", setCopied2)}
                 className="absolute right-0 top-0 z-10 m-4 flex items-center rounded-lg bg-transparent px-3 py-1 text-white"
@@ -206,7 +206,7 @@ export default function BeamCardComponent() {
                 {copied2 ? (
                   <Check className="text-green-500 h-4 w-4" />
                 ) : (
-                  <Copy className="text-black hover:text-gray-400 active:text-blue-700 h-4 w-4 dark:text-white" />
+                  <Clipboard className="text-black hover:text-gray-200 active:text-blue-700 h-4 w-4 dark:text-white" />
                 )}
               </button>
 
@@ -242,9 +242,9 @@ export default function BeamCardComponent() {
   </TabsList>
 </div>
 <TabsContent value="cli">
-  <div className="md:lg-3 ml-3 flex w-full max-w-full flex-col space-y-4 lg:ml-4">
+  <div className="md:lg-3 ml-3 flex w-full max-w-full flex-col space-y-4 lg:ml-0">
     {/* <p className="mt-5 text-xl font-semibold leading-7 tracking-tight lg:text-2xl">Installation</p> */}
-    <div className="relative w-full max-w-full rounded-md border border-gray-200 bg-gray-100 dark:border-gray-700 dark:bg-gray-800 [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
+    <div className="relative w-full max-w-full rounded-[0.50rem] border border-gray-200 bg-black dark:border-gray-800 dark:bg-zinc-900 [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
       <button 
         onClick={copyToClipboard}
         className="absolute right-0 top-0 z-10 m-4 flex items-center rounded-lg bg-transparent px-3 py-1 text-white" 
@@ -253,11 +253,11 @@ export default function BeamCardComponent() {
         {isCopied ? (
           <CheckIcon className="h-4 text-green-500" />
         ) : (
-          <CopyIcon className="h-4 text-black hover:text-gray-400 active:text-blue-700 dark:text-white" />
+          <CopyIcon className="h-4 text-white hover:text-gray-400 active:text-blue-700 dark:text-white" />
         )}
       </button>
       <pre className="font-sm ml-2 max-w-full overflow-x-auto rounded-2xl py-4 pl-2">
-        <code id="codeBlock3" className="language-js block w-full text-left text-sm"> 
+        <code id="codeBlock3" className="language-js block w-full text-left text-sm text-white"> 
           {`npx shadcn@latest add "https://easyui.pro/components-json/beam-card.json"`}
         </code>
       </pre>
@@ -267,7 +267,7 @@ export default function BeamCardComponent() {
 <TabsContent value="manual">
   <div className="pl-4">
     <p className="mt-0 font-semibold leading-7 tracking-tight mb-5">Copy and paste the following code into your <span className="italic font-normal">Components/ui/beam-card.tsx</span></p>
-      <div className="font-sm relative w-full rounded-md border border-gray-200 bg-gray-100 dark:border-gray-700 dark:bg-gray-800 [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
+      <div className="font-sm relative w-full rounded-[0.50rem] border border-gray-200 bg-gray-100 dark:border-gray-800 dark:bg-zinc-900 [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
         <button onClick={() => { 
                 const codeElement = document.getElementById('codeBlock');
                 const codeToCopy = codeElement ? codeElement.textContent : '';
@@ -282,15 +282,16 @@ export default function BeamCardComponent() {
               </svg> */}
               <CopyIcon className="h-4 text-black hover:text-gray-400 active:text-blue-700 dark:text-white" style={{ backdropFilter: 'blur(20px)' }} />
         </button>
-        <pre className="font-sm ml-2 min-h-[600px] py-2 pl-2 sm:min-h-[300px] lg:min-h-[600px] "><code id="codeBlock"  className="language-js text-left text-sm ">              
+        
+        <pre className="font-sm ml-2 min-h-[600px] py-2 pl-2 sm:min-h-[300px] lg:min-h-[600px]" data-language="tsx" data-theme="github-dark"><code id="codeBlock"  className="language-js text-left text-sm " data-language="tsx" data-theme="github-dark">              
         {"\"use client\"\n\nimport * as React from \"react\"\nimport { motion, useMotionTemplate, useMotionValue } from \"framer-motion\"\nimport { cn } from \"@/lib/utils\"\n\ninterface BeamCardProps extends React.HTMLAttributes<HTMLDivElement> {\n  beamColor?: string\n  glowColor?: string\n  borderColor?: string\n  hoverColor?: string\n}\n\nexport const BeamCard = React.forwardRef<HTMLDivElement, BeamCardProps>(\n  (\n    {\n      className,\n      children,\n      beamColor = \"#3b82f6\",\n      glowColor = \"rgba(59, 130, 246, 0.5)\",\n      borderColor = \"bg-gray-300 dark:bg-gray-700\",\n      hoverColor = \"rgba(59, 130, 246, 0.2)\",\n      ...props\n    },\n    ref,\n  ) => {\n    const [hovered, setHovered] = React.useState(false)\n    const mouseX = useMotionValue(0)\n    const mouseY = useMotionValue(0)\n\n    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {\n      const rect = e.currentTarget.getBoundingClientRect()\n      mouseX.set(e.clientX - rect.left)\n      mouseY.set(e.clientY - rect.top)\n    }\n\n    const glowStyle = useMotionTemplate`radial-gradient(\n      150px circle at ${mouseX}px ${mouseY}px,\n      ${glowColor},\n      transparent 80%\n    )`\n\n    return (\n      <motion.div\n        ref={ref}\n        className={cn(\n          \"relative overflow-hidden rounded-xl p-[1px] transition-colors duration-300\",\n          \"bg-slate-100 dark:bg-slate-800\",\n          className,\n        )}\n        style={{ background: borderColor }}\n        onMouseMove={handleMouseMove}\n        onMouseEnter={() => setHovered(true)}\n        onMouseLeave={() => setHovered(false)}\n        animate={{ background: hovered ? hoverColor : borderColor }}\n        {...props}\n      >\n        <motion.div\n          className=\"absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300\"\n          style={{ background: glowStyle }}\n          animate={{ opacity: hovered ? 1 : 0 }}\n        />\n        <motion.div\n          className=\"absolute inset-0 rounded-xl\"\n          style={{\n            background: `linear-gradient(90deg, transparent, ${beamColor}, transparent)`,\n            opacity: 0.5,\n            left: \"-100%\",\n          }}\n          animate={{\n            left: \"100%\",\n          }}\n          transition={{\n            duration: 3,\n            repeat: Number.POSITIVE_INFINITY,\n            repeatDelay: 1,\n          }}\n        />\n        <div className=\"relative rounded-[11px] bg-white dark:bg-black p-5 md:p-6\">{children}</div>\n      </motion.div>\n    )\n  },\n)\nBeamCard.displayName = \"BeamCard\"\n\n"}
             </code></pre>
 
             </div>
   </div>
-  <div className="pl-4 mt-5">
+  <div className="pl-4 mt-5 ">
     <p className="mt-0 font-semibold leading-7 tracking-tight mb-5">Copy and paste the following code into your <span className="italic font-normal">Components/ui/beam-button.tsx</span></p>
-      <div className="font-sm relative w-full rounded-md border border-gray-200 bg-gray-100 dark:border-gray-700 dark:bg-gray-800 [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
+      <div className="font-sm relative w-full rounded-[0.50rem] border border-gray-200 bg-gray-100 dark:border-gray-800 dark:bg-zinc-900 [&_pre]:my-0 [&_pre]:max-h-[350px] [&_pre]:overflow-auto">
         <button onClick={() => { 
                 const codeElement = document.getElementById('codeBlock');
                 const codeToCopy = codeElement ? codeElement.textContent : '';
