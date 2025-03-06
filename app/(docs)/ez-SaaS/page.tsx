@@ -91,7 +91,7 @@ function SaaSPage() {
             <li>Next.js</li>
             <li>Tailwind CSS</li>
             <li>Shadcn UI</li>
-            <li>Headless UI</li>
+            <li>Magic UI</li>
             <li>Framer Motion</li>
           </ul>
           <h3 className="text-2xl font-semibold leading-7">Quick Setup</h3>
