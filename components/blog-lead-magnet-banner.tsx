@@ -33,7 +33,7 @@ export default function BlogLeadMagnetBanner() {
             <Button
               variant="secondary"
               className="w-full bg-white hover:bg-white/90 text-violet-700 font-medium shadow-sm rounded-[1rem]"
-              onClick={() => (window.location.href = "/pro")}
+              onClick={() => window.open("https://premium.easyui.pro/", "_blank")}
             >
               Get Pro
               <ArrowRight className="w-4 h-4 ml-1" />
