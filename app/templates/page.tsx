@@ -40,7 +40,7 @@ const templates: Template[] = [
   { name: 'EZ Tmp5', image: '/ez-tmp5.png', path: '/ez-tmp5', description: 'Fifth option for rapid development', category: 'General', difficulty: 'Intermediate', isFree: true },
   { name: 'EZ NextUI', image: '/ez-nextui.png', path: '/ez-nextui', description: 'Leverage Next.js UI components', category: 'UI', difficulty: 'Intermediate', isFree: true },
   { name: 'EZ Notes', image: '/ez-notes.png', path: '/ez-notes', description: 'Create a sleek note-taking app', isNew: true, category: 'Productivity', difficulty: 'Advanced' },
-  { name: 'EZ Portfolio', image: '/ez-portfolio.png', path: '/ez-portfolio', description: 'Showcase your work beautifully', isNew: true, category: 'Portfolio', difficulty: 'Beginner' },
+  // { name: 'EZ Portfolio', image: '/ez-portfolio.png', path: '/ez-portfolio', description: 'Showcase your work beautifully', isNew: true, category: 'Portfolio', difficulty: 'Beginner' },
   { name: 'EZ Red', image: '/ez-red.png', path: '/ez-red', description: 'Design with a vibrant red theme', category: 'Design', difficulty: 'Intermediate', isFree: true },
   { name: 'EZ Shots', image: '/ez-shots.png', path: '/ez-shots', description: 'Create stunning image galleries', category: 'Gallery', difficulty: 'Intermediate', isFree: true },
   { name: 'EZ Story', image: '/ez-story.png', path: '/ez-story', description: 'Tell your story with style', isNew: true, category: 'Blog', difficulty: 'Beginner' },
