@@ -65,7 +65,7 @@ function LogoParticle() {
             Code
           </TabsTrigger>
         </TabsList>
-        
+        {/* @ts-ignore */}
         <RainbowButton className="z-50 mr-2 h-8 cursor-pointer rounded-xl px-4 font-semibold"  onClick={handleOpenInV0}>
           <span className="flex items-center text-sm font-semibold leading-7 ">
             Open in 
