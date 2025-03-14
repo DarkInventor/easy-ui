@@ -211,7 +211,7 @@
 
 import { useState, useEffect, useMemo } from 'react'
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { Menu, FileText, Command, TextCursorIcon, EggFriedIcon, FileSignature, HexagonIcon, LucideSpeaker, ChevronRight, Highlighter, CreditCard, SmileIcon, LucideCloudMoonRain, CornerLeftUp, Beaker, LucideCloudLightning } from 'lucide-react'
+import { Menu, FileText, Command, TextCursorIcon, EggFriedIcon, FileSignature, HexagonIcon, LucideSpeaker, ChevronRight, Highlighter, CreditCard, SmileIcon, LucideCloudMoonRain, CornerLeftUp, Beaker, LucideCloudLightning, Sparkle } from 'lucide-react'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Button } from "@/components/ui/button"
 import { BadgeIcon, CursorArrowIcon, DotFilledIcon, KeyboardIcon, Pencil1Icon, QuestionMarkCircledIcon, StarIcon, UploadIcon } from '@radix-ui/react-icons'
@@ -242,6 +242,7 @@ const ComponentMap = {
   'confetti poll': dynamic(() => import('../(docs)/confetti-poll/page')),
   'tilt motion': dynamic(() => import('../(docs)/tilt-motion/page')),
   'beam card': dynamic(() => import('../(docs)/beam-card/page')),
+  // 'logo particles': dynamic(() => import('../(docs)/logo-particles-component/page')),
 }
 
 const components = [
@@ -266,7 +267,8 @@ const components = [
   { name: 'colored button', category: 'buttons', isNew: true },
   { name: 'confetti poll', category: 'cards', isNew: true },
   { name: 'tilt motion', category: 'cards', isNew: true },
-  { name: 'beam card', category: 'cards', isNew: true }
+  { name: 'beam card', category: 'cards', isNew: true },
+  // { name: 'logo particles', category: 'typography', isNew: true }
 ] as const
 
 type ComponentName = typeof components[number]['name']
@@ -294,6 +296,7 @@ const iconMap: Record<ComponentName, JSX.Element> = {
   'confetti poll': <CornerLeftUp className='mr-2 size-4' />,
   'tilt motion': <CursorArrowIcon className='mr-2 size-4' />,
   'beam card': <LucideCloudLightning className='mr-2 size-4' />,
+  // 'logo particles': <Sparkle className='mr-2 size-4' />,
 }
 
 export default function TemplatePage() {

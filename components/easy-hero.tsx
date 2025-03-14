@@ -51,13 +51,13 @@ const EasyHero: React.FC<EasyHeroProps> = ({ title, subtext, heroimage }) => {
     <>
       <motion.div
         className="absolute inset-0 size-full"
-        style={{
-          backgroundImage:
-            theme === "dark"
-              ? "linear-gradient(to right, #1a1a1a 1px, transparent 1px), linear-gradient(to bottom, #1a1a1a 1px, transparent 1px)" // gray-900 for dark mode
-              : "linear-gradient(to right, #80808012 1px, transparent 1px), linear-gradient(to bottom, #80808012 1px, transparent 1px)", // light gray for light mode
-          backgroundSize: "24px 24px",
-        }}
+        // style={{
+        //   backgroundImage:
+        //     theme === "dark"
+        //       ? "linear-gradient(to right, #1a1a1a 1px, transparent 1px), linear-gradient(to bottom, #1a1a1a 1px, transparent 1px)" // gray-900 for dark mode
+        //       : "linear-gradient(to right, #80808012 1px, transparent 1px), linear-gradient(to bottom, #80808012 1px, transparent 1px)", // light gray for light mode
+        //   backgroundSize: "24px 24px",
+        // }}
         animate={
           isFlipping ? { opacity: 1, scale: 1.5 } : { opacity: 0.5, scale: 1 }
         }
@@ -65,7 +65,7 @@ const EasyHero: React.FC<EasyHeroProps> = ({ title, subtext, heroimage }) => {
       />
 
       <motion.div
-        className="min-h-auto before:mask-[image:radial-gradient(ellipse_50%_50%_at_50%_50%,_#000_60%,_transparent_100%)] relative flex flex-col items-center justify-center bg-white px-2 text-gray-900 before:absolute before:inset-0 before:bg-[radial-gradient(#e5e7eb_1px,_transparent_1px)] before:bg-[length:16px_16px] dark:bg-black dark:text-white dark:before:bg-[radial-gradient(#1a202c_1px,_transparent_1px)]"
+        className="min-h-auto relative flex flex-col items-center justify-center bg-white px-2 text-gray-900 dark:bg-background"
         variants={flipVariant}
         animate={isFlipping ? "flipped" : "notFlipped"}
       >
