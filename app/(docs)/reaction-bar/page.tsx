@@ -122,12 +122,12 @@ export default function ReactionBarComponent() {
             defaultReaction={reactions[0]}
             onReactionSelect={(reaction) => console.log("Selected reaction:", reaction)}
             variant="ghost"
-            size="lg"
+            size="sm"
             showLabel
             imageSize={20}
             popoverPosition="top"
             popoverClassName="bg-secondary"
-            emojiSize={24}
+            emojiSize={16}
             className="ml-1"
           />
           <button className="px-3 py-1 text-sm bg-primary text-primary-foreground rounded-full">Easy UI</button>
@@ -183,12 +183,12 @@ function Home() {
             defaultReaction={reactions[0]}
             onReactionSelect={(reaction) => console.log("Selected reaction:", reaction)}
             variant="ghost"
-            size="lg"
+            size="sm"
             showLabel
             imageSize={20}
             popoverPosition="top"
             popoverClassName="bg-secondary"
-            emojiSize={24}
+            emojiSize={16}
             className="ml-1"
           />
           <button className="px-3 py-1 text-sm bg-primary text-primary-foreground rounded-full">Easy UI</button>
@@ -276,7 +276,7 @@ export default Home
             imageSize={20}
             popoverPosition="top"
             popoverClassName="bg-secondary"
-            emojiSize={24}
+            emojiSize={20}
             className="ml-1"
           />
           <button className="px-3 py-1 text-sm bg-primary text-primary-foreground rounded-full">Easy UI</button>
@@ -341,7 +341,7 @@ function Home() {
                 imageSize={20}
                 popoverPosition="top"
                 popoverClassName="bg-secondary"
-                emojiSize={24}
+                emojiSize={20}
                 className="ml-1"
             />
             <button className="px-3 py-1 text-sm bg-primary text-primary-foreground rounded-full">Easy UI</button>

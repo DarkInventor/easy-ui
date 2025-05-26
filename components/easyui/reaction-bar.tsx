@@ -8,7 +8,7 @@ import Image from "next/image"
 import { cn } from "@/lib/utils"
 
 const reactionBarVariants = cva(
-  "inline-flex items-center justify-center rounded-full text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center rounded-full font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
@@ -17,9 +17,9 @@ const reactionBarVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
       },
       size: {
-        default: "h-10 w-10",
-        sm: "h-8 w-8",
-        lg: "h-12 w-12",
+        default: "h-8 w-16 text-sm",
+        sm: "h-8 w-16 text-sm",
+        lg: "h-10 w-20 text-md",
       },
     },
     defaultVariants: {
@@ -62,7 +62,7 @@ const ReactionBar = React.forwardRef<HTMLButtonElement, ReactionBarProps>(
       popoverPosition = "top",
       showLabel = false,
       imageSize = 20,
-      emojiSize = 24,
+      emojiSize = 16,
       popoverClassName,
       defaultImage,
       ...props
