@@ -90,7 +90,7 @@
 
 //   const SelectedComponent = useMemo(() => ComponentMap[selectedItem], [selectedItem])
 
-//   const renderNewBadge = (isNew?: boolean) => 
+//   const renderNewBadge = (isNew?: boolean) =>
 //     isNew && <span className="ml-2 rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800">New</span>
 
 //   const ComponentButton = ({ item }: { item: typeof components[number] }) => (
@@ -132,7 +132,6 @@
 //   //       </DropdownMenuContent>
 //   //     </DropdownMenu>
 //   //     <div className="flex-1 overflow-auto px-1">
- 
 //   //         <SelectedComponent />
 
 //   //     </div>
@@ -319,7 +318,7 @@ export default function TemplatePage() {
 
   const SelectedComponent = useMemo(() => ComponentMap[selectedItem], [selectedItem])
 
-  const renderNewBadge = (isNew?: boolean) => 
+  const renderNewBadge = (isNew?: boolean) =>
     isNew && <span className="ml-2 rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800">New</span>
 
   const ComponentButton = ({ item }: { item: typeof components[number] }) => (
@@ -359,12 +358,12 @@ export default function TemplatePage() {
               acc[category].push(component)
               return acc
             }, {} as Record<string, typeof components>)
-          ).sort(([a], [b]) => 
+          ).sort(([a], [b]) =>
             a === 'getting-started' ? -1 : b === 'getting-started' ? 1 : a.localeCompare(b)
           ).map(([category, items]) => (
             <div key={category}>
               <div className="px-2 py-1.5 text-xs font-semibold text-muted-foreground">
-                {category.split('-').map(word => 
+                {category.split('-').map(word =>
                   word.charAt(0).toUpperCase() + word.slice(1)
                 ).join(' ')}
               </div>
@@ -388,24 +387,24 @@ export default function TemplatePage() {
     </div>
   )
 
-  const DesktopLayout = () => {
-    const groupedComponents = useMemo(() => {
-      const groups = components.reduce((acc, component) => {
-        const category = component.category
-        if (!acc[category]) {
-           // @ts-ignore
-          acc[category] = []
-        }
-        // @ts-ignore
-        acc[category].push(component)
-        return acc
-      }, {} as Record<string, typeof components>)
-      
-      return Object.entries(groups).sort(([a], [b]) => 
-        a === 'getting-started' ? -1 : b === 'getting-started' ? 1 : a.localeCompare(b)
-      )
-    }, [])
+  const groupedComponents = useMemo(() => {
+    const groups = components.reduce((acc, component) => {
+      const category = component.category
+      if (!acc[category]) {
+         // @ts-ignore
+        acc[category] = []
+      }
+      // @ts-ignore
+      acc[category].push(component)
+      return acc
+    }, {} as Record<string, typeof components>)
 
+    return Object.entries(groups).sort(([a], [b]) =>
+      a === 'getting-started' ? -1 : b === 'getting-started' ? 1 : a.localeCompare(b)
+    )
+  }, [])
+
+  const DesktopLayout = useMemo(() => {
     return (
       <>
         <ScrollArea className="w-64">
@@ -413,11 +412,11 @@ export default function TemplatePage() {
             {groupedComponents.map(([category, items]) => (
               <div key={category} className="mb-4">
                 <h2 className="mb-2 px-2 text-sm font-semibold tracking-tight">
-                  {category.split('-').map(word => 
+                  {category.split('-').map(word =>
                     word.charAt(0).toUpperCase() + word.slice(1)
                   ).join(' ')}
                 </h2>
-                {items.map(item => 
+                {items.map(item =>
                   <ComponentButton key={item.name} item={item} />
                 )}
               </div>
@@ -429,11 +428,11 @@ export default function TemplatePage() {
         </div>
       </>
     )
-  }
+  }, [groupedComponents, SelectedComponent])
 
   return (
     <div className="flex h-screen">
-      {isLargeScreen ? <DesktopLayout /> : <MobileMenu />}
+      {isLargeScreen ? DesktopLayout : <MobileMenu />}
     </div>
   )
 }
