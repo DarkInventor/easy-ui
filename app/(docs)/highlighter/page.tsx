@@ -96,9 +96,27 @@ export default function FireFlyButtonComponent() {
             >
               <RotateCcw size={16} />
             </Button>
-            <p className="w-[70%] lg:w-[50%] leading-7">
-      This is <Highlighter color="#FF9800">Easy UI Highlighter</Highlighter> component, designed to make important text stand out effortlessly. Customize colors, actions, and styles to fit your needs. <Highlighter color="#FFC107" action="circle">Try it out now!</Highlighter>
-    </p>
+            <p className=" text-center w-[70%] leading-7">
+              The{" "}
+              <Highlighter color="#FF9800" action="underline">
+                Easy UI Highlighter
+              </Highlighter>{" "}
+              makes important{" "}
+              <Highlighter color="#87CEFA" action="highlight">
+                text stand out
+              </Highlighter>{" "}
+              effortlessly.{" "}
+              <Highlighter color="#E91E63" action="box">
+                Customize colors
+              </Highlighter>{" "}
+              and styles to fit your needs. It offers flexible highlighting for better
+              readability. Try it now and enhance{" "}
+              <Highlighter iterations={1} color="#9C27B0" action="circle">
+                {" "}
+                your content
+              </Highlighter>{" "}
+              with ease!
+            </p>
           </div>
         </TabsContent>
         <TabsContent value="code">      
@@ -127,8 +145,26 @@ import React from 'react'
 
 function Home() {
   return (
-    <p className="w-[80%] lg:w-[50%]">
-      This is the <Highlighter color="#FF9800">Easy UI Highlighter</Highlighter> component, designed to make important text stand out effortlessly. Customize colors, actions, and styles to fit your needs. <Highlighter color="#FFC107" action="circle">Try it out now!</Highlighter>
+    <p className=" text-center w-[70%] leading-7">
+      The{" "}
+      <Highlighter color="#FF9800" action="underline">
+        Easy UI Highlighter
+      </Highlighter>{" "}
+      makes important{" "}
+      <Highlighter color="#87CEFA" action="highlight">
+        text stand out
+      </Highlighter>{" "}
+      effortlessly.{" "}
+      <Highlighter color="#E91E63" action="box">
+        Customize colors
+      </Highlighter>{" "}
+      and styles to fit your needs. It offers flexible highlighting for better
+      readability. Try it now and enhance{" "}
+      <Highlighter iterations={1} color="#9C27B0" action="circle">
+        {" "}
+        your content
+      </Highlighter>{" "}
+      with ease!
     </p>
   )
 }
@@ -204,50 +240,80 @@ export default Home
               <CopyIcon className="h-4 text-black hover:text-gray-400 active:text-blue-700 dark:text-white" style={{ backdropFilter: 'blur(20px)' }} />
         </button>
         <pre className="font-sm ml-2 min-h-[600px] py-2 pl-2 sm:min-h-[300px] lg:min-h-[600px]"><code id="codeBlock"  className="language-js text-left text-sm ">              
-        {`"use client"
+        {`"use client";
 
-import React from 'react'
 import { useEffect, useRef } from "react";
 import { annotate } from "rough-notation";
-import type { RoughAnnotation } from "rough-notation/lib/model";
 import type React from "react";
 
+// Define available annotation actions
+type AnnotationAction =
+  | "highlight"
+  | "underline"
+  | "box"
+  | "circle"
+  | "strike-through"
+  | "crossed-off"
+  | "bracket";
+
+// Custom TypeScript interface for supported props
 interface HighlighterProps {
   children: React.ReactNode;
-  action?: "highlight" | "circle";
+  action?: AnnotationAction;
   color?: string;
+  strokeWidth?: number;
+  animationDuration?: number;
+  iterations?: number;
+  padding?: number;
+  multiline?: boolean;
 }
 
 export default function Highlighter({
   children,
   action = "highlight",
   color = "#ffd1dc", // Default pink color
+  strokeWidth = 1.5,
+  animationDuration = 600,
+  iterations = 2,
+  padding = 2,
+  multiline = true,
 }: HighlighterProps) {
   const elementRef = useRef<HTMLSpanElement>(null);
-  const annotationRef = useRef<RoughAnnotation | null>(null);
 
   useEffect(() => {
-    if (elementRef.current) {
-      const annotation = annotate(elementRef.current, {
-        type: action === "circle" ? "circle" : "highlight",
-        color: color,
-        multiline: true,
-        padding: action === "circle" ? 8 : 2,
-        iterations: 2, // More iterations for a natural effect
-        animationDuration: 500,
+    const element = elementRef.current;
+    if (element) {
+      const annotation = annotate(element, {
+        type: action,
+        color,
+        strokeWidth,
+        animationDuration,
+        iterations,
+        padding,
+        multiline,
       });
 
-      annotationRef.current = annotation;
       annotation.show();
-    }
 
-    return () => {
-      annotationRef.current?.remove();
-    };
-  }, [action, color, elementRef.current]); // Added elementRef.current dependency
+      // Store the current element in closure for cleanup
+      return () => {
+        if (element) {
+          annotate(element, { type: action }).remove();
+        }
+      };
+    }
+  }, [
+    action,
+    color,
+    strokeWidth,
+    animationDuration,
+    iterations,
+    padding,
+    multiline,
+  ]);
 
   return (
-    <span ref={elementRef} className="inline-block relative bg-transparent">
+    <span ref={elementRef} className="relative inline-block bg-transparent">
       {children}
     </span>
   );
